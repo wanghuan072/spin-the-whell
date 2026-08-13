@@ -1,0 +1,240 @@
+.disc {
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 48px);
+  height: calc(100% - 48px);
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid var(--wheel-disc-border);
+  box-shadow: var(--wheel-disc-inset);
+  container-type: size;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.12, 0.75, 0.12, 1);
+  will-change: transform;
+  background: var(--color-surface);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.has-face .face {
+  box-shadow: inset 0 0 28px rgb(0 0 0 / 24%);
+}
+
+.rim {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px oklch(99% 0.01 100 / 28%);
+  pointer-events: none;
+}
+
+.look-solid {
+  border-color: oklch(22% 0.06 278);
+  box-shadow:
+    var(--wheel-disc-inset),
+    inset 0 0 0 2px oklch(100% 0 0 / 18%),
+    inset 0 -8px 14px oklch(12% 0.04 278 / 12%);
+}
+
+.look-solid .label > span {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+.look-solid .rim {
+  box-shadow:
+    inset 0 0 0 2px oklch(99% 0.01 100 / 24%),
+    inset 0 0 0 5px oklch(15% 0.05 278 / 12%);
+}
+
+.look-horizon {
+  border-color: oklch(86% 0.08 230);
+  box-shadow:
+    var(--wheel-disc-inset),
+    inset -18px 0 28px oklch(100% 0 0 / 14%),
+    inset 14px 0 24px oklch(0% 0 0 / 18%),
+    0 0 12px oklch(78% 0.12 230 / 24%);
+}
+
+.look-horizon .label > span {
+  text-shadow:
+    0 1px 2px rgb(15 23 42 / 74%),
+    0 0 5px rgb(255 255 255 / 18%);
+}
+
+.look-horizon .rim {
+  box-shadow:
+    inset 0 0 0 2px oklch(100% 0 0 / 52%),
+    inset 0 0 0 5px oklch(60% 0.12 230 / 14%),
+    inset -14px 0 20px oklch(100% 0 0 / 14%);
+}
+
+.look-vertical {
+  border-color: #6b3826;
+  box-shadow:
+    var(--wheel-disc-inset),
+    inset 0 -18px 28px rgb(67 20 7 / 34%),
+    inset 0 12px 20px rgb(255 247 214 / 16%),
+    inset 0 0 0 3px rgb(84 41 24 / 24%);
+}
+
+.look-vertical .label > span {
+  text-shadow: 0 1px 2px rgba(69, 26, 3, 0.65);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.look-vertical .rim {
+  box-shadow:
+    inset 0 0 0 2px rgb(255 239 177 / 58%),
+    inset 0 0 0 6px rgb(69 30 17 / 18%);
+}
+
+.look-radial {
+  border-color: oklch(78% 0.2 310);
+  box-shadow:
+    0 0 18px oklch(70% 0.24 310 / 52%),
+    0 0 34px oklch(70% 0.18 220 / 22%),
+    inset 0 0 28px oklch(60% 0.2 300 / 42%);
+}
+
+.look-radial .label > span {
+  text-shadow:
+    0 0 6px oklch(80% 0.2 310 / 80%),
+    0 0 12px oklch(70% 0.22 300 / 55%),
+    0 1px 2px rgba(0, 0, 0, 0.8);
+  font-weight: 750;
+  letter-spacing: 0.04em;
+}
+
+.look-radial .rim {
+  box-shadow:
+    inset 0 0 0 2px oklch(82% 0.2 310 / 64%),
+    inset 0 0 18px oklch(76% 0.17 220 / 28%);
+}
+
+.look-spoke {
+  border-color: #0f172a;
+  box-shadow:
+    inset 0 0 0 4px #f8fafc,
+    inset 0 0 0 7px #0f172a,
+    inset 0 0 18px rgb(0 0 0 / 34%);
+}
+
+.look-spoke .label > span {
+  text-shadow:
+    -1px -1px 0 rgb(15 23 42 / 40%),
+    1px 1px 0 rgb(15 23 42 / 40%);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.look-spoke .rim {
+  box-shadow:
+    inset 0 0 0 3px #f8fafc,
+    inset 0 0 0 7px #0f172a;
+}
+
+.look-seamless {
+  border-color: oklch(94% 0.025 300);
+  box-shadow:
+    inset 0 0 28px oklch(100% 0 0 / 46%),
+    inset 0 -12px 22px oklch(58% 0.05 275 / 12%),
+    0 0 14px oklch(88% 0.06 330 / 20%);
+}
+
+.look-seamless .label > span {
+  text-shadow: 0 1px 0 oklch(100% 0 0 / 55%);
+  font-weight: 750;
+}
+
+.look-seamless .rim {
+  box-shadow:
+    inset 0 0 0 2px oklch(100% 0 0 / 52%),
+    inset 0 0 16px oklch(100% 0 0 / 22%);
+}
+
+/* 半径臂：从圆心伸出到外缘，文字锚在臂的 62% 处（扇区几何中心附近） */
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  width: 50%;
+  height: 3.2em;
+  margin-top: -1.6em;
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+.label > span {
+  position: absolute;
+  top: 50%;
+  left: 59%;
+  display: block;
+  width: 68%;
+  max-width: 68%;
+  color: inherit;
+  font-size: clamp(0.72rem, 5.2cqi, 1.08rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.04;
+  overflow-wrap: anywhere;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+  white-space: normal;
+  transform: translate(-50%, -50%);
+}
+
+.label.compact > span {
+  left: 60%;
+  width: 62%;
+  max-width: 62%;
+  font-size: clamp(0.54rem, 3.7cqi, 0.78rem);
+}
+
+.label.long > span {
+  font-size: clamp(0.56rem, 4.1cqi, 0.86rem);
+}
+
+.spinning {
+  transition-property: transform;
+}
+
+.settled {
+  filter: saturate(1.05);
+}
+
+.idle {
+  /* 待机状态保持轻微运动感，但不要抢过操作区的视觉焦点。 */
+  animation: wheel-idle 24s linear infinite;
+}
+
+@keyframes wheel-idle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idle {
+    animation: none;
+  }
+}

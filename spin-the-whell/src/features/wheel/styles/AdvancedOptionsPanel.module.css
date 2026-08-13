@@ -1,0 +1,237 @@
+.advanced-panel {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.advanced-intro,
+.advanced-empty {
+  min-width: 0;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.66rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.advanced-list {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  padding-right: 3px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--color-line) transparent;
+  scrollbar-width: thin;
+}
+
+.advanced-item {
+  height: max-content;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--option-color) 32%, var(--color-line-soft));
+  border-radius: 8px;
+  background:
+    linear-gradient(115deg, color-mix(in oklab, var(--option-color) 13%, transparent), transparent 55%),
+    var(--color-surface);
+}
+
+.advanced-item summary {
+  display: grid;
+  min-height: 36px;
+  grid-template-columns: 10px minmax(0, 1fr) auto auto 10px;
+  gap: 5px;
+  align-items: center;
+  padding: 5px 7px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.advanced-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.advanced-item summary::after {
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid var(--color-muted);
+  border-bottom: 1.5px solid var(--color-muted);
+  content: "";
+  transform: rotate(45deg) translate(-1px, -1px);
+  transition: transform 160ms var(--ease);
+}
+
+.advanced-item[open] summary::after {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+
+.advanced-item summary:hover {
+  background: color-mix(in oklab, var(--option-color) 10%, transparent);
+}
+
+.advanced-item summary i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--option-color);
+}
+
+.advanced-item summary strong {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 0.67rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.advanced-item summary span {
+  color: var(--color-primary);
+  font-size: 0.56rem;
+  font-weight: 800;
+}
+
+.advanced-item summary em {
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 0.5rem;
+  font-style: normal;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.advanced-item summary em[data-visible="false"] {
+  background: var(--color-surface-alt);
+  color: var(--color-muted);
+}
+
+.advanced-body {
+  display: grid;
+  gap: 6px;
+  padding: 7px;
+  border-top: 1px solid var(--color-line-soft);
+}
+
+.weight-control {
+  display: grid;
+  gap: 3px;
+}
+
+.weight-control > span {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.weight-control output {
+  color: var(--color-text);
+}
+
+.weight-control input {
+  width: 100%;
+}
+
+.color-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.color-controls label {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 4px 5px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 7px;
+  color: var(--color-muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+}
+
+.color-controls label span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.color-controls input {
+  width: 24px;
+  height: 20px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.advanced-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.advanced-actions label,
+.advanced-actions button {
+  display: inline-flex;
+  min-width: 0;
+  min-height: 29px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 3px 5px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 7px;
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  font-size: 0.56rem;
+  font-weight: 700;
+  line-height: 1.15;
+  cursor: pointer;
+  text-align: center;
+}
+
+.advanced-actions input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.advanced-actions svg {
+  width: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.advanced-actions .clear-image {
+  border-color: color-mix(in oklab, var(--color-primary) 34%, var(--color-line-soft));
+  color: var(--color-primary);
+}
+
+.advanced-actions .image-visibility[aria-pressed="true"] {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.advanced-actions label:hover,
+.advanced-actions button:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+}

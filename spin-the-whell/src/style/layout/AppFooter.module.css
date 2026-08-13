@@ -1,0 +1,130 @@
+.app-footer {
+  border-top: 1px solid var(--color-line-soft);
+  background: var(--color-surface-alt);
+}
+
+.app-footer-content {
+  display: grid;
+  max-width: 1180px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px 64px;
+  align-items: start;
+  padding-block: 36px 28px;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 12px;
+  max-width: 420px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: var(--color-text);
+}
+
+.footer-wheel {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  background: conic-gradient(#ef4444, #f59e0b, #84cc16, #06b6d4, #2563eb, #9333ea, #ec4899, #ef4444);
+}
+
+.footer-logo strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.footer-brand > p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.footer-nav-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 40px;
+  justify-self: end;
+  width: min(100%, 420px);
+}
+
+.app-footer nav > strong {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.footer-navigation {
+  display: grid;
+  gap: 4px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-navigation a {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 550;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-line-soft);
+}
+
+.footer-bottom-inner {
+  max-width: 1180px;
+  padding-block: 14px 18px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.68rem;
+  font-weight: 550;
+}
+
+@media (max-width: 1024px) {
+  .app-footer-content {
+    gap: 32px 40px;
+    padding-block: 32px 24px;
+  }
+
+  .footer-nav-groups {
+    width: min(100%, 380px);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-footer-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 28px 22px;
+  }
+
+  .footer-nav-groups {
+    justify-self: stretch;
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .footer-navigation a:hover,
+  .footer-logo:hover {
+    color: var(--color-text);
+  }
+}
+

@@ -1,0 +1,347 @@
+.queue-panel {
+  display: flex;
+  min-height: 0;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* 左侧编辑区占满剩余高度；右侧状态区保持内容高度。 */
+.queue-editor {
+  min-height: 0;
+  flex: 1 1 auto;
+}
+
+.queue-editor .queue-list {
+  min-height: 0;
+  max-height: none;
+  flex: 1 1 auto;
+  align-content: start;
+  grid-auto-rows: 68px;
+}
+
+.queue-status {
+  flex: 0 0 auto;
+}
+
+.queue-live {
+  display: grid;
+  gap: 7px;
+  padding: 9px;
+  border: 1px solid color-mix(in oklab, var(--color-primary) 30%, var(--color-line));
+  border-radius: 10px;
+  background: linear-gradient(145deg, var(--color-primary-soft), var(--color-surface));
+}
+
+.queue-live-heading,
+.queue-live-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.queue-live-heading span {
+  color: var(--color-primary);
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+.queue-live-heading strong {
+  color: var(--color-muted);
+  font-size: 0.58rem;
+}
+
+.queue-live-current {
+  display: grid;
+  gap: 1px;
+  padding: 7px 8px;
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--color-surface) 86%, transparent);
+}
+
+.queue-live-current span,
+.queue-live-next span {
+  color: var(--color-muted);
+  font-size: 0.52rem;
+  font-weight: 700;
+}
+
+.queue-live-current strong {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 0.76rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.queue-live-current em {
+  color: var(--color-primary);
+  font-size: 0.58rem;
+  font-style: normal;
+  font-weight: 750;
+}
+
+.queue-progress {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--color-line);
+}
+
+.queue-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+}
+
+.queue-live-next strong {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 0.56rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.queue-live-empty {
+  display: grid;
+  gap: 2px;
+  padding: 7px 8px;
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--color-surface) 86%, transparent);
+}
+
+.queue-live-empty strong {
+  color: var(--color-text);
+  font-size: 0.66rem;
+}
+
+.queue-live-empty p {
+  color: var(--color-muted);
+  font-size: 0.55rem;
+  line-height: 1.35;
+}
+
+.queue-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 1px 2px;
+}
+
+.queue-summary span {
+  color: var(--color-muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+}
+
+.queue-summary strong {
+  color: var(--color-text);
+  font-size: 0.58rem;
+}
+
+.queue-tools {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.queue-tools button,
+.queue-empty button,
+.reset-progress,
+.skip-current {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 8px;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.62rem;
+  font-weight: 750;
+}
+
+.queue-tools button:first-child,
+.queue-empty button {
+  border-color: color-mix(in oklab, var(--color-primary) 35%, var(--color-line));
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.queue-tools svg,
+.queue-empty svg,
+.reset-progress svg,
+.skip-current svg {
+  width: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.queue-fields input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+}
+
+.queue-list {
+  display: grid;
+  min-height: 90px;
+  max-height: min(220px, 34vh);
+  gap: 5px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.queue-item {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 26px;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 9px;
+  background: var(--color-surface);
+}
+
+.queue-item.is-active {
+  border-color: color-mix(in oklab, var(--color-primary) 55%, var(--color-line));
+  box-shadow: inset 3px 0 0 var(--color-primary);
+}
+
+.queue-item.is-complete {
+  background: color-mix(in oklab, var(--color-success, #16845b) 6%, var(--color-surface));
+}
+
+.queue-item.is-skipped {
+  opacity: 0.58;
+}
+
+.queue-order,
+.queue-remove {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 7px;
+  background: var(--color-surface-alt);
+  color: var(--color-muted);
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+
+.queue-remove svg {
+  width: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.queue-fields {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.queue-fields > input {
+  height: 22px;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.queue-fields > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.queue-fields label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-muted);
+  font-size: 0.56rem;
+  font-weight: 700;
+}
+
+.queue-fields label input {
+  width: 58px;
+  height: 24px;
+  padding: 0 4px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 5px;
+  background: var(--color-surface-alt);
+  font-size: 0.58rem;
+  text-align: center;
+}
+
+.item-status {
+  color: var(--color-primary);
+  font-size: 0.56rem;
+  font-weight: 800;
+}
+
+.queue-empty {
+  display: grid;
+  place-items: center;
+  gap: 5px;
+  min-height: 140px;
+  padding: 18px 12px;
+  border: 1px dashed var(--color-line);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.queue-empty strong {
+  color: var(--color-text);
+  font-size: 0.72rem;
+}
+
+.queue-empty p {
+  max-width: 180px;
+  color: var(--color-muted);
+  font-size: 0.61rem;
+  line-height: 1.4;
+}
+
+.queue-progress-actions {
+  display: grid;
+  gap: 5px;
+}
+
+.reset-progress,
+.skip-current {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.skip-current {
+  border-color: color-mix(in oklab, var(--color-primary) 35%, var(--color-line));
+  color: var(--color-primary);
+}
+
+.reset-progress {
+  color: var(--color-muted);
+}
+
+.queue-panel button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+@media (hover: hover) {
+  .queue-panel button:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}

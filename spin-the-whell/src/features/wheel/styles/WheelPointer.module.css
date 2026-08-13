@@ -1,0 +1,298 @@
+.pointer {
+  --pointer-shadow-color: oklch(20% 0.05 30 / 45%);
+  --pointer-block-offset: -22px;
+  --pointer-inline-offset: -8px;
+  --wheel-pointer-accent: #fef08a;
+  --wheel-pointer-detail: #172554;
+  --wheel-pointer-line: oklch(98% 0.02 95 / 78%);
+
+  position: absolute;
+  z-index: 7;
+  top: -8px;
+  left: 50%;
+  display: grid;
+  /* 五个正式方位统一尺寸；预览图标继续使用下方的紧凑规格。 */
+  width: 86px;
+  height: 116px;
+  place-items: center;
+  filter: drop-shadow(0 6px 10px var(--pointer-shadow-color));
+  transform: translateX(-50%);
+  /* 外层以几何中心旋转，保证左右位置落在水平直径上。 */
+  transform-origin: 50% 50%;
+}
+
+.pointer svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform-origin: 50% 18%;
+}
+
+.pointer.preview {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 28px;
+  height: 36px;
+  filter: drop-shadow(0 2px 3px oklch(20% 0.04 30 / 28%));
+  transform: none;
+}
+
+.pointer.embedded {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  /* 中央指针覆盖按钮表面，并让尖头越过按钮上边缘形成明确指向。 */
+  width: 86px;
+  height: 116px;
+  filter: drop-shadow(0 5px 9px oklch(20% 0.05 30 / 44%));
+  transform: none;
+}
+
+.pointer.embedded.position-center {
+  /* Center-mode pointers pivot from their decorated base rather than the full SVG box. */
+  transform: translateY(-25%) rotate(180deg);
+}
+
+/* 每种造型拥有独立的材质与配色，避免只更换轮廓却仍像同一枚指针。 */
+.style-needle {
+  --pointer-shadow-color: rgb(14 165 233 / 44%);
+  --pointer-block-offset: -17px;
+  --pointer-inline-offset: -2px;
+  --wheel-pointer-top: #a5f3fc;
+  --wheel-pointer-mid: #22d3ee;
+  --wheel-pointer-bottom: #2563eb;
+  --wheel-pointer-border: #082f49;
+  --wheel-pointer-shine: rgb(236 254 255 / 78%);
+  --wheel-pointer-rim-top: #f8fafc;
+  --wheel-pointer-rim-bottom: #94a3b8;
+  --wheel-pointer-rim-stroke: #334155;
+  --wheel-pointer-jewel-light: #ecfeff;
+  --wheel-pointer-jewel: #06b6d4;
+  --wheel-pointer-accent: #fde047;
+  --wheel-pointer-detail: #082f49;
+  --wheel-pointer-line: rgb(236 254 255 / 86%);
+}
+
+.style-jewel {
+  --pointer-shadow-color: rgb(244 63 94 / 42%);
+  --pointer-block-offset: -17px;
+  --pointer-inline-offset: -2px;
+  --wheel-pointer-top: #fb7185;
+  --wheel-pointer-mid: #e11d48;
+  --wheel-pointer-bottom: #881337;
+  --wheel-pointer-border: #5f1234;
+  --wheel-pointer-shine: rgb(255 228 230 / 66%);
+  --wheel-pointer-rim-top: #fde68a;
+  --wheel-pointer-rim-bottom: #f59e0b;
+  --wheel-pointer-rim-stroke: #92400e;
+  --wheel-pointer-jewel-light: #fdf2f8;
+  --wheel-pointer-jewel: #f43f5e;
+  --wheel-pointer-accent: #f9a8d4;
+  --wheel-pointer-detail: #831843;
+  --wheel-pointer-line: rgb(255 241 242 / 78%);
+}
+
+.style-arrow {
+  --pointer-shadow-color: rgb(249 115 22 / 42%);
+  --pointer-block-offset: -21px;
+  --pointer-inline-offset: -6px;
+  --wheel-pointer-top: #fde047;
+  --wheel-pointer-mid: #fb923c;
+  --wheel-pointer-bottom: #ea580c;
+  --wheel-pointer-border: #7c2d12;
+  --wheel-pointer-shine: rgb(255 251 235 / 72%);
+  --wheel-pointer-rim-top: #22d3ee;
+  --wheel-pointer-rim-bottom: #0284c7;
+  --wheel-pointer-rim-stroke: #0c4a6e;
+  --wheel-pointer-jewel-light: #ecfeff;
+  --wheel-pointer-jewel: #06b6d4;
+  --wheel-pointer-accent: #172554;
+  --wheel-pointer-detail: #fff7ed;
+  --wheel-pointer-line: rgb(255 247 237 / 88%);
+}
+
+.style-chevron {
+  --pointer-shadow-color: rgb(168 85 247 / 45%);
+  --pointer-block-offset: -22px;
+  --pointer-inline-offset: -8px;
+  --wheel-pointer-top: #c084fc;
+  --wheel-pointer-mid: #8b5cf6;
+  --wheel-pointer-bottom: #4c1d95;
+  --wheel-pointer-border: #2e1065;
+  --wheel-pointer-shine: rgb(243 232 255 / 68%);
+  --wheel-pointer-rim-top: #bef264;
+  --wheel-pointer-rim-bottom: #65a30d;
+  --wheel-pointer-rim-stroke: #365314;
+  --wheel-pointer-jewel-light: #ecfccb;
+  --wheel-pointer-jewel: #84cc16;
+  --wheel-pointer-accent: #22d3ee;
+  --wheel-pointer-detail: #2e1065;
+  --wheel-pointer-line: rgb(236 254 255 / 84%);
+}
+
+.style-ticket {
+  --pointer-shadow-color: rgb(20 184 166 / 40%);
+  --pointer-block-offset: -21px;
+  --pointer-inline-offset: -6px;
+  --wheel-pointer-top: #99f6e4;
+  --wheel-pointer-mid: #2dd4bf;
+  --wheel-pointer-bottom: #0f766e;
+  --wheel-pointer-border: #134e4a;
+  --wheel-pointer-shine: rgb(240 253 250 / 72%);
+  --wheel-pointer-rim-top: #fef3c7;
+  --wheel-pointer-rim-bottom: #f59e0b;
+  --wheel-pointer-rim-stroke: #92400e;
+  --wheel-pointer-jewel-light: #fefce8;
+  --wheel-pointer-jewel: #facc15;
+  --wheel-pointer-accent: #fff7ed;
+  --wheel-pointer-detail: #134e4a;
+  --wheel-pointer-line: rgb(240 253 250 / 90%);
+}
+
+.style-claw {
+  --pointer-shadow-color: rgb(59 130 246 / 44%);
+  --pointer-block-offset: -22px;
+  --pointer-inline-offset: -7px;
+  --wheel-pointer-top: #60a5fa;
+  --wheel-pointer-mid: #2563eb;
+  --wheel-pointer-bottom: #1e3a8a;
+  --wheel-pointer-border: #172554;
+  --wheel-pointer-shine: rgb(219 234 254 / 68%);
+  --wheel-pointer-rim-top: #e2e8f0;
+  --wheel-pointer-rim-bottom: #64748b;
+  --wheel-pointer-rim-stroke: #334155;
+  --wheel-pointer-jewel-light: #d9f99d;
+  --wheel-pointer-jewel: #84cc16;
+  --wheel-pointer-accent: #bef264;
+  --wheel-pointer-detail: #172554;
+  --wheel-pointer-line: rgb(239 246 255 / 82%);
+}
+
+.style-compass {
+  --pointer-shadow-color: rgb(54 32 16 / 52%);
+  --pointer-block-offset: -17px;
+  --pointer-inline-offset: -2px;
+  --wheel-pointer-border: #2f1d12;
+  --wheel-pointer-shine: rgb(255 243 189 / 58%);
+  --wheel-pointer-rim-stroke: #4b2e16;
+  --wheel-pointer-line: rgb(255 241 168 / 76%);
+}
+
+.style-court {
+  --pointer-shadow-color: rgb(3 7 18 / 58%);
+  --pointer-block-offset: -17px;
+  --pointer-inline-offset: -2px;
+  --wheel-pointer-border: #020617;
+  --wheel-pointer-shine: rgb(248 250 252 / 58%);
+  --wheel-pointer-rim-stroke: #7c2d12;
+  --wheel-pointer-line: rgb(255 255 255 / 82%);
+}
+
+.style-cinema {
+  --pointer-shadow-color: rgb(0 0 0 / 72%);
+  --pointer-block-offset: -18px;
+  --pointer-inline-offset: -3px;
+  --wheel-pointer-border: #000000;
+  --wheel-pointer-shine: rgb(255 240 168 / 42%);
+  --wheel-pointer-rim-stroke: #7c511f;
+  --wheel-pointer-line: rgb(255 240 168 / 76%);
+}
+
+.shadow {
+  fill: oklch(20% 0.04 270 / 28%);
+  transform: translate(1px, 2px);
+}
+
+.body {
+  stroke: var(--wheel-pointer-border);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.shine {
+  fill: var(--wheel-pointer-shine);
+}
+
+.rim {
+  stroke: var(--wheel-pointer-rim-stroke);
+  stroke-width: 1.2;
+}
+
+.glint {
+  fill: oklch(98% 0.02 95 / 88%);
+}
+
+.accent {
+  fill: var(--wheel-pointer-accent);
+}
+
+.detail {
+  fill: var(--wheel-pointer-detail);
+}
+
+.line {
+  fill: none;
+  stroke: var(--wheel-pointer-line);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+/* 指针位置与指向保持一致；Center 从圆心向上指出。 */
+.position-top {
+  top: var(--pointer-block-offset);
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.position-bottom {
+  top: auto;
+  right: auto;
+  bottom: var(--pointer-block-offset);
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.position-left {
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: var(--pointer-inline-offset);
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.position-right {
+  top: 50%;
+  right: var(--pointer-inline-offset);
+  bottom: auto;
+  left: auto;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.pointer.is-winning svg {
+  animation: winner-pointer 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes winner-pointer {
+  0%, 100% { transform: rotate(0); }
+  32% { transform: rotate(-9deg) scale(1.05); }
+  62% { transform: rotate(6deg) scale(1.02); }
+}
+
+.pointer.preview.is-winning svg {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pointer.is-winning svg {
+    animation: none;
+  }
+}

@@ -1,0 +1,137 @@
+.crumb-bar {
+  border-bottom: 1px solid var(--color-line-soft);
+  background: var(--color-surface-alt);
+}
+
+.crumb-bar ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-block: 12px;
+  color: var(--color-muted);
+  font-size: 0.64rem;
+}
+
+.crumb-bar li:not(:last-child)::after {
+  margin-left: 5px;
+  content: "/";
+}
+
+.legal-body-section {
+  padding-block: 36px 64px;
+}
+
+.legal-layout {
+  display: grid;
+  gap: 28px;
+}
+
+.legal-aside {
+  align-self: start;
+  padding: 14px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 10px;
+  background: var(--color-surface);
+}
+
+.legal-aside strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.legal-aside ul {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legal-aside a {
+  display: block;
+  padding: 7px 8px;
+  border-radius: 7px;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.legal-aside a.is-active,
+.legal-aside a[aria-current="page"] {
+  background: var(--color-primary-soft);
+  color: var(--color-text);
+}
+
+.legal-copy {
+  max-width: 760px;
+  min-width: 0;
+}
+
+.legal-copy :global(h2) {
+  margin-top: 28px;
+  font-size: 1.25rem;
+}
+
+.legal-copy :global(h2:first-child) {
+  margin-top: 0;
+}
+
+.legal-copy :global(p),
+.legal-copy :global(li) {
+  margin-top: 10px;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.legal-copy :global(ul) {
+  margin-top: 10px;
+  padding-left: 1.2rem;
+}
+
+.legal-copy :global(a) {
+  color: var(--color-primary);
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-layout {
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.legal-aside {
+  position: sticky;
+  top: 88px;
+}
+
+@media (max-width: 1024px) {
+  .legal-layout {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .legal-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .legal-aside {
+    position: static;
+  }
+}
+
+@media (hover: hover) {
+  .legal-aside a:hover {
+    color: var(--color-text);
+    background: var(--color-surface-alt);
+  }
+}

@@ -1,0 +1,361 @@
+.queue-import-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgb(12 15 32 / 68%);
+  backdrop-filter: blur(8px);
+}
+
+.queue-import-modal {
+  width: min(760px, 100%);
+  max-height: min(780px, calc(100vh - 36px));
+  overflow: auto;
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  background: var(--color-surface);
+  box-shadow: 0 26px 80px rgb(10 13 32 / 26%);
+}
+
+.queue-import-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px 13px;
+  border-bottom: 1px solid var(--color-line-soft);
+}
+
+.queue-import-header > div {
+  display: grid;
+  gap: 2px;
+}
+
+.queue-import-header span {
+  color: var(--color-primary);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.queue-import-header h2 {
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.queue-import-header p {
+  max-width: 560px;
+  color: var(--color-muted);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.queue-import-header > button {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--color-line);
+  border-radius: 9px;
+  background: var(--color-surface-alt);
+  color: var(--color-muted);
+}
+
+.queue-import-header svg,
+.source-tabs svg,
+.excel-drop-zone > svg {
+  width: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.source-tabs {
+  display: flex;
+  gap: 5px;
+  padding: 10px 18px 0;
+}
+
+.source-tabs button {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 8px;
+  background: var(--color-surface-alt);
+  color: var(--color-muted);
+  font-size: 0.66rem;
+  font-weight: 750;
+}
+
+.source-tabs button.is-active {
+  border-color: color-mix(in oklab, var(--color-primary) 40%, var(--color-line));
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.queue-import-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
+  gap: 12px;
+  padding: 12px 18px 16px;
+}
+
+.paste-area {
+  display: grid;
+  gap: 6px;
+}
+
+.paste-area > span,
+.paste-area small {
+  color: var(--color-muted);
+  font-size: 0.62rem;
+  font-weight: 650;
+}
+
+.paste-area textarea {
+  width: 100%;
+  min-height: 250px;
+  resize: vertical;
+  padding: 10px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
+
+.excel-drop-zone {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px dashed var(--color-line);
+  border-radius: 10px;
+  background: var(--color-surface-alt);
+}
+
+.excel-drop-zone.is-dragging {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.excel-drop-zone > div {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.excel-drop-zone strong {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 0.68rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.excel-drop-zone span {
+  color: var(--color-muted);
+  font-size: 0.58rem;
+}
+
+.excel-drop-zone label {
+  padding: 7px 9px;
+  border: 1px solid var(--color-line);
+  border-radius: 7px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.6rem;
+  font-weight: 750;
+}
+
+.excel-drop-zone input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.excel-selectors {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.excel-selectors label {
+  display: grid;
+  gap: 4px;
+}
+
+.excel-selectors span {
+  color: var(--color-muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+}
+
+.excel-selectors select {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  padding: 0 7px;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.62rem;
+}
+
+.queue-preview {
+  min-height: 280px;
+  padding: 10px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 10px;
+  background: var(--color-surface-alt);
+}
+
+.queue-preview > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.queue-preview strong {
+  color: var(--color-text);
+  font-size: 0.68rem;
+}
+
+.queue-preview span,
+.queue-preview p,
+.queue-preview small {
+  color: var(--color-muted);
+  font-size: 0.6rem;
+}
+
+.queue-preview ol {
+  display: grid;
+  gap: 3px;
+  max-height: 240px;
+  overflow: auto;
+}
+
+.queue-preview li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px;
+  min-height: 27px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  background: var(--color-surface);
+}
+
+.queue-preview li strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.queue-preview li em {
+  color: var(--color-primary);
+  font-size: 0.57rem;
+  font-style: normal;
+  font-weight: 750;
+}
+
+.queue-import-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 18px;
+  border-top: 1px solid var(--color-line-soft);
+  background: var(--color-surface-alt);
+}
+
+.queue-import-footer p {
+  color: var(--color-muted);
+  font-size: 0.61rem;
+}
+
+.queue-import-footer > div {
+  display: flex;
+  gap: 6px;
+}
+
+.queue-import-footer button {
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.62rem;
+  font-weight: 750;
+}
+
+.queue-import-footer button:last-child {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.queue-import-footer button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+@media (max-width: 680px) {
+  .queue-import-backdrop {
+    padding: 8px;
+  }
+
+  .queue-import-modal {
+    max-height: calc(100vh - 16px);
+  }
+
+  .queue-import-content {
+    grid-template-columns: 1fr;
+    padding-inline: 12px;
+  }
+
+  .queue-import-header,
+  .queue-import-footer {
+    padding-inline: 12px;
+  }
+
+  .queue-import-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .queue-import-footer > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .excel-drop-zone {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+
+  .excel-drop-zone label {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .excel-selectors {
+    grid-template-columns: 1fr;
+  }
+}

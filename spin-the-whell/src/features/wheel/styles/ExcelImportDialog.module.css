@@ -1,0 +1,538 @@
+/* Excel导入弹窗独立维护，避免主转盘样式承担一次性导入界面。 */
+.excel-modal-backdrop {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: oklch(22% 0.03 250 / 45%);
+  backdrop-filter: blur(5px);
+  animation: backdrop-in 180ms ease-out both;
+}
+
+.excel-modal {
+  width: min(720px, 100%);
+  max-height: min(760px, calc(100vh - 36px));
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft), 0 0 0 1px oklch(99% 0.004 240 / 80%) inset;
+  animation: modal-in 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.excel-modal-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 36px;
+  align-items: start;
+  gap: 18px;
+  padding: 20px 22px 17px;
+  border-bottom: 1px solid var(--color-line-soft);
+  background: linear-gradient(115deg, var(--color-primary-soft), var(--color-surface) 62%);
+}
+
+.excel-modal-header > div {
+  min-width: 0;
+}
+
+.excel-modal-header span {
+  color: var(--color-success);
+  font-size: 0.61rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.excel-modal-header h2 {
+  margin-top: 4px;
+  color: var(--color-text);
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  line-height: 1.1;
+}
+
+.excel-modal-header p {
+  margin-top: 7px;
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.excel-modal-header button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 7px;
+  background: var(--color-surface-alt);
+  color: var(--color-muted);
+}
+
+.excel-modal-header button svg {
+  width: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.import-source-tabs {
+  display: flex;
+  gap: 5px;
+  padding: 10px 22px 0;
+}
+
+.import-source-tabs button {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 8px;
+  background: var(--color-surface-alt);
+  color: var(--color-muted);
+  font-size: 0.66rem;
+  font-weight: 750;
+}
+
+.import-source-tabs button.is-active {
+  border-color: color-mix(in oklab, var(--color-primary) 40%, var(--color-line));
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.import-source-tabs svg {
+  width: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.excel-modal-content {
+  display: grid;
+  gap: 14px;
+  max-height: min(530px, calc(100vh - 245px));
+  padding: 18px 22px;
+  overflow-y: auto;
+}
+
+.paste-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.9fr);
+  gap: 14px;
+}
+
+.paste-workspace > label {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+}
+
+.paste-workspace > label span {
+  color: var(--color-muted);
+  font-size: 0.62rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.paste-workspace textarea {
+  width: 100%;
+  min-height: 260px;
+  resize: vertical;
+  padding: 10px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: 9px;
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+.paste-workspace .excel-preview {
+  margin-top: 0;
+}
+
+.excel-drop-zone {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+  min-height: 88px;
+  padding: 14px 16px;
+  border: 1px dashed oklch(72% 0.1 155);
+  border-radius: 9px;
+  background: oklch(96% 0.03 155);
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.excel-drop-zone.is-dragging {
+  border-color: var(--color-success);
+  background: oklch(94% 0.04 155);
+  transform: scale(1.008);
+}
+
+.excel-drop-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 9px;
+  background: oklch(92% 0.06 155);
+  color: var(--color-success);
+}
+
+.excel-drop-icon svg,
+.excel-file-row svg {
+  width: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.excel-drop-zone > div {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.excel-drop-zone strong {
+  color: var(--color-text);
+  font-size: 0.77rem;
+}
+
+.excel-drop-zone > div span {
+  color: var(--color-muted);
+  font-size: 0.64rem;
+}
+
+.excel-drop-zone label {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 13px;
+  border: 1px solid oklch(72% 0.1 155);
+  border-radius: 6px;
+  background: oklch(94% 0.04 155);
+  color: var(--color-success);
+  cursor: pointer;
+  font-size: 0.63rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.excel-drop-zone label[aria-disabled="true"] {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.excel-drop-zone input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.excel-workspace {
+  min-width: 0;
+}
+
+.excel-file-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-line-soft);
+}
+
+.excel-file-row > span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 7px;
+  background: oklch(94% 0.04 155);
+  color: var(--color-success);
+}
+
+.excel-file-row > div {
+  min-width: 0;
+}
+
+.excel-file-row strong,
+.excel-file-row small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.excel-file-row strong {
+  color: var(--color-text);
+  font-size: 0.72rem;
+}
+
+.excel-file-row small {
+  margin-top: 2px;
+  color: var(--color-muted);
+  font-size: 0.58rem;
+}
+
+.excel-import-selectors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.excel-import-selectors label {
+  min-width: 0;
+}
+
+.excel-import-selectors span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-muted);
+  font-size: 0.61rem;
+  font-weight: 700;
+}
+
+.excel-import-selectors select {
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  padding-inline: 9px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.68rem;
+}
+
+.excel-preview {
+  margin-top: 14px;
+}
+
+.excel-preview > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.excel-preview > div strong,
+.excel-preview > div span {
+  font-size: 0.64rem;
+}
+
+.excel-preview > div span,
+.excel-preview > p {
+  color: var(--color-muted);
+}
+
+.excel-preview ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  max-height: 220px;
+  margin-top: 8px;
+  padding: 8px;
+  overflow-y: auto;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 8px;
+  background: var(--color-surface-alt);
+}
+
+.excel-preview li {
+  display: grid;
+  min-width: 0;
+  min-height: 30px;
+  grid-template-columns: 22px minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.65rem;
+}
+
+.excel-preview li > span {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: oklch(94% 0.04 155);
+  color: var(--color-success);
+  font-size: 0.53rem;
+  font-weight: 800;
+}
+
+.excel-preview li > strong {
+  min-width: 0;
+  overflow: hidden;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.excel-preview > p {
+  margin-top: 7px;
+  font-size: 0.61rem;
+}
+
+.excel-modal-footer {
+  display: grid;
+  min-height: 70px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 22px;
+  border-top: 1px solid var(--color-line-soft);
+  background: var(--color-surface-alt);
+}
+
+.excel-import-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.excel-import-actions button {
+  min-width: 0;
+  min-height: 36px;
+  padding-inline: 13px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.excel-import-actions button:last-child {
+  border-color: var(--color-primary-dark);
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  color: var(--color-on-primary);
+}
+
+.excel-import-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+.excel-import-status {
+  color: var(--color-muted);
+  font-size: 0.61rem;
+  line-height: 1.4;
+}
+
+.excel-import-selectors select:focus {
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: 0 0 0 3px oklch(58% 0.2 28 / 15%);
+}
+
+.excel-modal button:focus-visible,
+.excel-drop-zone label:focus-within {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 768px) {
+  .excel-modal-backdrop {
+    align-items: end;
+    padding: 0;
+  }
+
+  .excel-modal {
+    width: 100%;
+    max-height: 92vh;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .excel-modal-header {
+    padding: 17px 16px 14px;
+  }
+
+  .excel-modal-content {
+    max-height: calc(92vh - 230px);
+    padding: 14px 16px;
+  }
+
+  .import-source-tabs {
+    padding-inline: 14px;
+  }
+
+  .paste-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .excel-drop-zone {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+
+  .excel-drop-zone label {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .excel-import-selectors,
+  .excel-preview ol {
+    grid-template-columns: 1fr;
+  }
+
+  .excel-preview ol {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .excel-modal-footer {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px 16px 16px;
+  }
+
+  .excel-import-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .excel-import-actions button {
+    padding-inline: 7px;
+  }
+}
+
+@media (hover: hover) {
+  .excel-drop-zone label:hover,
+  .excel-import-actions button:hover:not(:disabled),
+  .excel-modal-header button:hover {
+    border-color: var(--color-success);
+    color: var(--color-text);
+    filter: brightness(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .excel-modal-backdrop,
+  .excel-modal {
+    animation: none;
+  }
+}

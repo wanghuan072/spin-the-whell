@@ -1,0 +1,191 @@
+{
+  "faqItems": [
+    {
+      "question": "Is the wheel free to use?",
+      "answer": "Yes. Create lists, style the wheel, run Classic or Turn Queue sessions, and reuse templates with no account, download, or paywall."
+    },
+    {
+      "question": "I just opened the wheel—what should I try first?",
+      "answer": "Scroll to the live Spin the Wheel, edit a few names in Options, then spin once. When you need prize tiers or fixed rounds, switch to Turn Queue. Browse Spin the Wheel templates if you want a ready scene such as an event raffle or classroom picker."
+    },
+    {
+      "question": "How does the wheel choose a result?",
+      "answer": "The result is chosen with the browser's random number generator before the animation plays. Equal weights mean equal odds. In Advanced you can raise an option's weight; the percentage beside each option updates so the odds stay visible."
+    },
+    {
+      "question": "What is the difference between Classic and Turn Queue?",
+      "answer": "Classic is for one clear pick—a meal, a name, or yes/no. Turn Queue is for ordered rounds: people, teams, or prize tiers each get a turn count, and the wheel advances through the queue. Event raffles often put names on the wheel and prizes in Queue."
+    },
+    {
+      "question": "What do the left and right panels control?",
+      "answer": "Left side manages the list: Options (add, edit, sort, shuffle, paste/Excel import), Results (history, view all rounds, CSV download), Advanced (weights, text/slice colors, slice images), and Queue when Turn Queue is on. Right side styles the show: Look (slice style and wheel face), Chrome (pointer, rim, lights), and Stage (backdrop and winner celebration)."
+    },
+    {
+      "question": "Can the wheel remove a winner after each spin?",
+      "answer": "Turn on Remove winner in settings. After a result lands, that option leaves before the next spin so the same person is not drawn again. Start with at least two options."
+    },
+    {
+      "question": "Where is my setup saved, and what does Share include?",
+      "answer": "Entries, queue items, styles, and session history stay in this browser's local storage. Share copies the current options, weights, and colors into a link—not the Results history. Download the CSV from Results when you need a record."
+    },
+    {
+      "question": "Can I import a long list from Excel?",
+      "answer": "Yes. Paste one item per line, or upload an Excel file (about 5 MB max), choose the column with names, then replace or append. Each label is capped at 36 characters; the wheel holds up to 100 options."
+    },
+    {
+      "question": "Is this a certified lottery or raffle system?",
+      "answer": "No. It is a browser tool for classrooms, parties, event raffles, and everyday choices. For regulated contests or anything that needs certified randomness, follow local law and your own published rules."
+    }
+  ],
+  "howSteps": [
+    {
+      "number": "01",
+      "label": "Build the list",
+      "title": "Add the names or choices",
+      "copy": "Type names or options in the left Options panel, paste a roster, or import a column from Excel. Remove jokes and duplicates before anyone watches. You can sort or shuffle the list when you want a fresh order on the disc."
+    },
+    {
+      "number": "02",
+      "label": "Choose the mode",
+      "title": "Choose Classic or Turn Queue",
+      "copy": "Stay on Classic for dinner, yes/no, or a single name. Switch to Turn Queue when people or prize tiers need fixed turns—for example 3rd prize ×3, then 2nd prize ×2, then 1st prize ×1. Turn on Remove winner when repeats should not happen."
+    },
+    {
+      "number": "03",
+      "label": "Dress the stage",
+      "title": "Set the look, pointer, and stage",
+      "copy": "Use the right-side Look, Chrome, and Stage tabs for slice style, pointer, rim lights, backdrop, and celebration. Open fullscreen for a projector, keep sound on if the room likes ticks, and choose a spin duration that does not slow down the session."
+    },
+    {
+      "number": "04",
+      "label": "Spin and keep a trail",
+      "title": "Spin, review, and export the results",
+      "copy": "Spin when the rules are clear. Check Results for recent winners, open View all rounds for the full session, download a CSV when you need a record, or Share a link so someone else opens the same option list."
+    }
+  ],
+  "features": [
+    {
+      "code": "LIST",
+      "label": "Left · Options",
+      "title": "Build the list by hand, paste, or Excel import",
+      "copy": "Add or edit up to 100 options, shuffle or sort, paste a roster, or import an Excel column (about 5 MB). Each label stays short enough to read on a phone or projector.",
+      "span": "wide"
+    },
+    {
+      "code": "QUEUE",
+      "label": "Left · Queue",
+      "title": "Run planned rounds with Turn Queue",
+      "copy": "Give each person, team, or prize its own turn count. The active queue item stays highlighted so the room knows which round is live—handy for event raffles and classroom cycles.",
+      "span": "normal"
+    },
+    {
+      "code": "RESULTS",
+      "label": "Left · Results",
+      "title": "Review every result and export a CSV",
+      "copy": "Every spin lands in Results. Open View all rounds for the full session, download a CSV for your notes, and remember: Share links carry the list, not the winner log.",
+      "span": "normal"
+    },
+    {
+      "code": "ADVANCED",
+      "label": "Left · Advanced",
+      "title": "Adjust visible odds and individual slices",
+      "copy": "Raise an option's chance when the group agrees, tweak text and slice colors, or add a temporary image on a slice. Percentages stay visible so unequal odds are never a surprise.",
+      "span": "normal"
+    },
+    {
+      "code": "LOOK",
+      "label": "Right · Look & Chrome",
+      "title": "Wheel styles, pointer position, rim and lights",
+      "copy": "Change how slices are filled, move or restyle the pointer, and pick rim and light presets so the wheel matches a classroom board or a party screen.",
+      "span": "normal"
+    },
+    {
+      "code": "STAGE",
+      "label": "Right · Stage",
+      "title": "Stage backdrop and winner celebration effects",
+      "copy": "Choose a stage preset, upload a backdrop that fits local storage, and pick a celebration scene for the result—useful when the wheel is the center of the room.",
+      "span": "normal"
+    },
+    {
+      "code": "TOOLS",
+      "label": "Toolbar",
+      "title": "Control sound, timing, fullscreen, share, and reset",
+      "copy": "Mute or change tick sounds, set spin duration, go fullscreen for a big display, share the current options link, or Reset to restore the starter list for this page.",
+      "span": "wide"
+    }
+  ],
+  "modeExamples": [
+    {
+      "code": "CLASSIC",
+      "label": "Classic",
+      "title": "Classic for one decision or a simple draw",
+      "copy": "Best when you need a single answer: yes/no, dinner, who speaks next, or a livestream giveaway prize. Equal slices by default; optional weights when everyone can see the odds. Pair with Remove winner for a clean pass through a roster.",
+      "href": "/#wheel-game",
+      "points": [
+        "One-off decisions and simple draws",
+        "Optional Remove winner between spins",
+        "Weights only when the group agrees"
+      ]
+    },
+    {
+      "code": "QUEUE",
+      "label": "Turn Queue",
+      "title": "Turn Queue for planned people or prize rounds",
+      "copy": "Best when structure matters: event raffles with 3rd / 2nd / 1st counts, or each student getting two turns. Names stay on the wheel; Queue holds the rounds. Draw lower prizes first if winners should leave before first place.",
+      "href": "/templates/event-raffle-wheel",
+      "points": [
+        "People or prizes with their own turn counts",
+        "Queue highlight shows the live round",
+        "Works with Remove winner for no-repeat draws"
+      ]
+    }
+  ],
+  "advantages": [
+    {
+      "code": "CONTROL",
+      "label": "No account wall",
+      "title": "Free Spin the Wheel online with no sign-up",
+      "copy": "There is no sign-up, install, or trial gate. Start on the home wheel or open a template, edit the list, and spin while the room is still watching. Ideal for teachers, hosts, and anyone who cannot afford a setup detour."
+    },
+    {
+      "code": "MODES",
+      "label": "Two real play modes",
+      "title": "Decision wheel and Turn Queue in one random picker",
+      "copy": "Most spinners only handle a single result. Here you can run a quick Classic pick or switch to Turn Queue when prize tiers or people need fixed turns—without rebuilding the list in another app."
+    },
+    {
+      "code": "CARDS",
+      "label": "Fairness you can show",
+      "title": "Fair Spin the Wheel with visible odds and remove winner",
+      "copy": "Weights show percentages, Remove winner keeps repeats out, and the site clearly states that this is browser randomness—not a certified lottery system."
+    },
+    {
+      "code": "SESSION",
+      "label": "Local and reviewable",
+      "title": "Local Spin the Wheel saves plus Results CSV export",
+      "copy": "Settings and history stay in browser storage—there is no account profile of your roster. When someone asks who already won, open Results or download the CSV. Share links hand off the current options, not private winner history."
+    }
+  ],
+  "useCases": [
+    {
+      "code": "ABC",
+      "title": "Classroom Spin the Wheel and random student picker",
+      "copy": "Pick students or prompts fairly. Use Remove winner for a full pass through the roster, or Turn Queue when every learner needs a set number of turns."
+    },
+    {
+      "code": "TEAM",
+      "title": "Team meeting role picker and icebreaker wheel",
+      "copy": "Choose facilitators, icebreakers, or agenda owners without awkward volunteering. Keep the wheel on screen so the decision stays visible."
+    },
+    {
+      "code": "GIFT",
+      "title": "Event raffle wheel and giveaway winner spinner",
+      "copy": "Put names on the wheel and prize tiers in Queue. Draw lower prizes first with Remove winner on, then finish with first place—and export Results if you need a record."
+    },
+    {
+      "code": "DAY",
+      "title": "Everyday decision wheel for food, chores and watch picks",
+      "copy": "Use it for food, chores, what to watch, or party prompts when nobody wants to decide and a visible spin can end the loop."
+    }
+  ]
+}
