@@ -1,7 +1,7 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import helmet from "helmet";
+import * as helmetModule from "helmet";
 import { getEnv } from "./config/env.js";
 import { errorHandler, notFoundHandler } from "./lib/errors.js";
 import { adminAuthRouter } from "./routes/admin-auth.js";
@@ -13,7 +13,7 @@ export function createApp() {
   const app = express();
   app.set("trust proxy", 1);
   app.disable("x-powered-by");
-  app.use(helmet());
+  app.use(helmetModule.default());
   app.use(cors({ origin: getEnv().FRONTEND_ORIGIN, credentials: true }));
   app.use(express.json({ limit: "16kb" }));
   app.use(cookieParser());
