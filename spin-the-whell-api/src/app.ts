@@ -1,7 +1,8 @@
 import express from "express";
+import type { RequestHandler } from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import * as helmetModule from "helmet";
+import helmetImport from "helmet";
 import { getEnv } from "./config/env.js";
 import { errorHandler, notFoundHandler } from "./lib/errors.js";
 import { adminAuthRouter } from "./routes/admin-auth.js";
@@ -9,11 +10,15 @@ import { adminCommentsRouter } from "./routes/admin-comments.js";
 import { commentsRouter } from "./routes/comments.js";
 import { userAuthRouter } from "./routes/user-auth.js";
 
+// Helmet 8 publishes a callable ESM default, but TypeScript 6 can resolve its
+// declaration as a module namespace on Linux build hosts such as Vercel.
+const createHelmetMiddleware = helmetImport as unknown as () => RequestHandler;
+
 export function createApp() {
   const app = express();
   app.set("trust proxy", 1);
   app.disable("x-powered-by");
-  app.use(helmetModule.default());
+  app.use(createHelmetMiddleware());
   app.use(cors({ origin: getEnv().FRONTEND_ORIGIN, credentials: true }));
   app.use(express.json({ limit: "16kb" }));
   app.use(cookieParser());
