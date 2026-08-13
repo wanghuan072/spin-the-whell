@@ -32,3 +32,9 @@ export function createApp() {
   app.use(errorHandler);
   return app;
 }
+
+// Vercel's zero-config Express runtime detects src/app.ts as the function
+// entrypoint and requires the Express application as the default export.
+const app = createApp();
+
+export default app;
