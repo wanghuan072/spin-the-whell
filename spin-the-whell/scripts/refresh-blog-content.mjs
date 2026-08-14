@@ -13,7 +13,7 @@ const ordered = posts.map((post) => {
     post.intro = post.excerpt;
     delete post.excerpt;
   }
-  post.author = "Spin the Wheel Team";
+  post.author = "Spinanywheel Team";
   post.detailsHtml = post.detailsHtml.replace(
     "<h2>Quick checklist</h2>",
     "<h2>Before you spin</h2>",

@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "isHome": true,
     "title": "Event Raffle Wheel",
     "description": "Run several prize tiers from one participant list. Turn Queue keeps the draw order visible while Remove winner prevents duplicate winners.",
     "imageUrl": "/images/templates/screenshots/event-raffle-wheel.webp",
@@ -48,9 +49,10 @@
       "scope": "8 sample names"
     },
     "seo": {
-      "title": "Event Raffle Wheel - Multi-Prize Turn Queue Spinner",
-      "description": "Run an event raffle with names on the wheel and prize tiers in Turn Queue. Draw lower prizes first, remove winners, then finish with first place.",
+      "title": "Event Raffle Wheel - Spin The Wheel Templates | Spinanywheel",
+      "description": "Use Spinanywheel's Event Raffle Wheel to put participant names in Options and prize tiers in Turn Queue, remove winners, and export the finished draw.",
       "keywords": [
+        "spinanywheel",
         "event raffle wheel",
         "multi prize draw wheel",
         "turn queue raffle",
@@ -67,6 +69,7 @@
   },
   {
     "id": 2,
+    "isHome": true,
     "title": "Spin The Wheel Yes Or No",
     "description": "Ask one clear, low-stakes question and let two equally weighted answers break the tie. The first result is most useful when you agree not to keep spinning for the answer you wanted.",
     "imageUrl": "/images/templates/screenshots/spin-the-wheel-yes-or-no.webp",
@@ -93,8 +96,9 @@
     },
     "seo": {
       "title": "Spin The Wheel Yes Or No - Spin The Wheel Templates",
-      "description": "Use Spin The Wheel Yes Or No for a quick 50/50 answer to a low-stakes question. Check the equal odds, spin once, and edit or share the two-option template.",
+      "description": "Use Spinanywheel's Spin The Wheel Yes Or No for a quick 50/50 answer to a low-stakes question. Check equal odds, spin once, then share the result.",
       "keywords": [
+        "spinanywheel",
         "spin the wheel yes or no",
         "yes or no wheel",
         "yes no spinner",
@@ -111,6 +115,7 @@
   },
   {
     "id": 3,
+    "isHome": false,
     "title": "Europe Country Wheel",
     "description": "Spin through 44 sovereign states placed in the UN M49 European region. Use it for travel prompts, geography practice, or project assignments.",
     "imageUrl": "/images/templates/screenshots/europe-country-wheel.webp",
@@ -190,9 +195,10 @@
       }
     ],
     "seo": {
-      "title": "Europe Country Spin the Wheel - Random Country Picker",
-      "description": "Use a Europe country spin the wheel with 44 clearly scoped sovereign states. Pick a random country for travel ideas, lessons, games, or projects.",
+      "title": "Europe Country Wheel - Spin The Wheel Templates",
+      "description": "Use Spinanywheel's Europe Country Wheel with 44 clearly scoped sovereign states for geography lessons, project assignments, travel prompts, and games.",
       "keywords": [
+        "spinanywheel",
         "country spin the wheel",
         "Europe country wheel",
         "random European country",
@@ -255,6 +261,7 @@
   },
   {
     "id": 4,
+    "isHome": false,
     "title": "Pokémon Type Team Wheel",
     "description": "Build a six-slot team by spinning Pokémon types in Turn Queue. Each result fills one slot, and selected types leave the wheel to keep the mix varied.",
     "imageUrl": "/images/templates/screenshots/pokemon-type-team-wheel.webp",
@@ -366,9 +373,10 @@
       }
     ],
     "seo": {
-      "title": "Pokémon Type Team Wheel - Six-Slot Team Builder",
-      "description": "Use Pokémon Type Team Wheel to spin all 18 types into six Turn Queue team slots, then check type coverage, moves, Abilities, and game eligibility.",
+      "title": "Pokémon Type Team Wheel - Spin The Wheel Templates",
+      "description": "Use Spinanywheel's Pokémon Type Team Wheel to place all 18 types into six Turn Queue team slots, then check coverage, moves, Abilities, and eligibility.",
       "keywords": [
+        "spinanywheel",
         "Pokémon type team wheel",
         "random Pokémon type",
         "Pokémon team builder wheel",
@@ -405,6 +413,7 @@
   },
   {
     "id": 5,
+    "isHome": true,
     "title": "Color Spin The Wheel",
     "description": "Spin twelve familiar colors for an art prompt, craft choice, team label, game rule, or palette constraint. Every starter slice uses the color named on it.",
     "imageUrl": "/images/templates/screenshots/color-spin-the-wheel.webp",
@@ -466,8 +475,9 @@
     "contentImages": [],
     "seo": {
       "title": "Color Spin The Wheel - Spin The Wheel Templates",
-      "description": "Use Color Spin The Wheel to choose from 12 matching named colors for drawing, crafts, games, teams, or a no-repeat palette exercise.",
+      "description": "Use Spinanywheel's Color Spin The Wheel to choose from 12 matching named colors for drawing, crafts, team games, or a non-repeating palette challenge.",
       "keywords": [
+        "spinanywheel",
         "color spin the wheel",
         "random color wheel",
         "color spinner",
@@ -484,6 +494,7 @@
   },
   {
     "id": 6,
+    "isHome": false,
     "title": "NBA Teams Spin The Wheel",
     "description": "Spin all 30 NBA teams with equal starter weights for watch-party games, friendly matchups, trivia prompts, or a no-repeat league challenge.",
     "imageUrl": "/images/templates/screenshots/nba-teams-spin-the-wheel.webp",
@@ -543,8 +554,9 @@
     },
     "seo": {
       "title": "NBA Teams Spin The Wheel - Spin The Wheel Templates",
-      "description": "Use NBA Teams Spin The Wheel with all 30 teams and equal starter weights. Pick a random team for games, trivia, watch parties, or challenges.",
+      "description": "Use Spinanywheel's NBA Teams Spin The Wheel with all 30 teams and equal starter weights for matchups, trivia, watch parties, drafts, and challenges.",
       "keywords": [
+        "spinanywheel",
         "nba teams spin the wheel",
         "NBA team wheel",
         "random NBA team",
@@ -593,6 +605,7 @@
   },
   {
     "id": 7,
+    "isHome": false,
     "title": "Games Spin The Wheel",
     "description": "Choose from 16 broad game genres before opening another long game list. Edit the genres for your platform, devices, age group, and play session.",
     "imageUrl": "/images/templates/screenshots/games-spin-the-wheel.webp",
@@ -639,8 +652,9 @@
     },
     "seo": {
       "title": "Games Spin The Wheel - Spin The Wheel Templates",
-      "description": "Use Games Spin The Wheel to choose from 16 broad genres for a game night or challenge. Edit the list for your platform, group, and available games.",
+      "description": "Use Spinanywheel's Games Spin The Wheel to choose from 16 broad genres for a game night, then edit the list for your platform, group, and available titles.",
       "keywords": [
+        "spinanywheel",
         "games spin the wheel",
         "game genre wheel",
         "random game picker",
@@ -675,6 +689,7 @@
   },
   {
     "id": 9,
+    "isHome": false,
     "title": "Movie Spin The Wheel",
     "description": "Spin twelve movie genres to escape endless browsing, or replace them with titles already available and acceptable to everyone watching tonight.",
     "imageUrl": "/images/templates/screenshots/movie-spin-the-wheel.webp",
@@ -715,8 +730,9 @@
     },
     "seo": {
       "title": "Movie Spin The Wheel - Spin The Wheel Templates",
-      "description": "Use Movie Spin The Wheel to choose from 12 film genres, or paste tonight's available shortlist. Agree on vetoes once, spin, and stop endless browsing.",
+      "description": "Use Spinanywheel's Movie Spin The Wheel to choose from 12 film genres or paste tonight's available shortlist, agree on vetoes, and end endless browsing.",
       "keywords": [
+        "spinanywheel",
         "movie spin the wheel",
         "movie picker wheel",
         "random movie wheel",
@@ -747,6 +763,7 @@
   },
   {
     "id": 10,
+    "isHome": true,
     "title": "Country Spin The Wheel",
     "description": "Spin a balanced 24-country starter set drawn from every inhabited region. Use the result for geography prompts, trivia, food themes, or early travel research.",
     "imageUrl": "/images/templates/screenshots/country-spin-the-wheel.webp",
@@ -800,8 +817,9 @@
     },
     "seo": {
       "title": "Country Spin The Wheel - Spin The Wheel Templates",
-      "description": "Use Country Spin The Wheel with a 24-country starter list spanning world regions. Pick a geography, trivia, food, culture, or travel research prompt.",
+      "description": "Use Spinanywheel's Country Spin The Wheel with a 24-country starter set for geography, trivia, classroom projects, food themes, or early travel research.",
       "keywords": [
+        "spinanywheel",
         "country spin the wheel",
         "random country wheel",
         "country picker",
@@ -844,6 +862,7 @@
   },
   {
     "id": 11,
+    "isHome": false,
     "title": "Pokemon Spin The Wheel",
     "description": "Spin 24 familiar Pokémon names for a casual favorite, drawing prompt, party challenge, or starter draft. Edit the list to match the game, generation, or collection your group uses.",
     "imageUrl": "/images/templates/screenshots/pokemon-spin-the-wheel.webp",
@@ -899,8 +918,9 @@
     },
     "seo": {
       "title": "Pokemon Spin The Wheel - Spin The Wheel Templates",
-      "description": "Use Pokemon Spin The Wheel with 24 familiar names for drawing, party games, favorites, or a casual draft. Edit the list for your game or generation.",
+      "description": "Use Spinanywheel's Pokemon Spin The Wheel with 24 familiar names for drawing, party games, Pokédex research, favorites, or a casual no-repeat draft.",
       "keywords": [
+        "spinanywheel",
         "pokemon spin the wheel",
         "random Pokemon wheel",
         "Pokemon picker",
@@ -943,6 +963,7 @@
   },
   {
     "id": 12,
+    "isHome": false,
     "title": "NBA Player Spin The Wheel",
     "description": "Spin a curated mix of current stars and widely recognized NBA names for trivia, friendly drafts, debates, drawing prompts, or game-night challenges.",
     "imageUrl": "/images/templates/screenshots/nba-player-spin-the-wheel.webp",
@@ -990,8 +1011,9 @@
     },
     "seo": {
       "title": "NBA Player Spin The Wheel - Spin The Wheel Templates",
-      "description": "Use NBA Player Spin The Wheel with 18 recognized names for trivia, debates, casual drafts, or game-night prompts. Review and edit the current starter list.",
+      "description": "Use Spinanywheel's NBA Player Spin The Wheel with 18 recognized names for trivia, debates, casual drafts, stat research, drawing prompts, or game nights.",
       "keywords": [
+        "spinanywheel",
         "nba player spin the wheel",
         "random NBA player wheel",
         "NBA player picker",
@@ -1025,5 +1047,88 @@
     "lightsStyle": "scoreboard",
     "pointerPosition": "right",
     "cardImageUrl": "/images/templates/screenshots/nba-player-spin-the-wheel-latest.webp"
+  },
+  {
+    "id": 13,
+    "isHome": false,
+    "title": "Spin the Wheel Names",
+    "description": "Load a class, meeting, or activity roster and pick one visible name at a time. Equal starter weights, Remove winner, and Results support clear low-stakes rounds.",
+    "imageUrl": "/images/templates/screenshots/spin-the-wheel-names-editor.webp",
+    "cardImageUrl": "/images/templates/screenshots/spin-the-wheel-names-editor-latest.webp",
+    "imageAlt": "Spin the Wheel Names template with twelve sample names on a classroom-style wheel",
+    "addressBar": "spin-the-wheel-names",
+    "updatedDate": "2026-08-14",
+    "reviewSummary": "The workflow was checked against the current Options, Advanced, Remove winner, Results, sharing, and Excel import controls; the names are fictional examples rather than a real roster.",
+    "category": "Education",
+    "entries": [
+      "Alex",
+      "Maya",
+      "Jordan",
+      "Liam",
+      "Sofia",
+      "Noah",
+      "Emma",
+      "Lucas",
+      "Ava",
+      "Ethan",
+      "Mia",
+      "Leo"
+    ],
+    "colors": [
+      "#2563EB",
+      "#7C3AED",
+      "#DB2777",
+      "#EA580C",
+      "#CA8A04",
+      "#65A30D",
+      "#059669",
+      "#0891B2",
+      "#4F46E5",
+      "#9333EA",
+      "#E11D48",
+      "#0F766E"
+    ],
+    "textColors": [
+      "#FFFFFF",
+      "#FFFFFF",
+      "#FFFFFF",
+      "#FFFFFF",
+      "#111827",
+      "#111827",
+      "#FFFFFF",
+      "#FFFFFF",
+      "#FFFFFF",
+      "#FFFFFF",
+      "#FFFFFF",
+      "#FFFFFF"
+    ],
+    "background": "spotlight",
+    "pointerStyle": "arrow",
+    "pointerPosition": "right",
+    "rimStyle": "ocean",
+    "lightsStyle": "starlight",
+    "stageImage": "/images/templates/stages/classroom-board.svg",
+    "removeWinner": true,
+    "runMode": "classic",
+    "queueItems": [],
+    "source": {
+      "label": "Current Spinanywheel editor behavior and classroom-use review",
+      "checkedAt": "2026-08-14",
+      "scope": "12 fictional sample first names"
+    },
+    "contentImages": [],
+    "seo": {
+      "title": "Spin the Wheel Names - Spin The Wheel Templates",
+      "description": "Use Spinanywheel's Spin the Wheel Names to pick a student, speaker, volunteer, or presentation order. Edit sample names, keep equal odds, and remove repeats.",
+      "keywords": [
+        "spinanywheel",
+        "spin the wheel names",
+        "random name picker",
+        "student name wheel",
+        "classroom name spinner",
+        "name picker wheel"
+      ]
+    },
+    "detailsHtml": "<h2>What Spin the Wheel Names is designed to decide</h2><p>This template answers a narrow question: which visible name should take the next low-stakes turn? It can choose a reader, speaker, volunteer, game participant, presentation order, or meeting facilitator. The twelve names are fictional examples. Replace every one of them before using the wheel with a real group, and decide what the selected person is being asked to do before the first spin.</p><p>A random name does not make every activity fair by itself. Participation needs, accessibility arrangements, absences, consent, and the difficulty of the task still belong to the organizer. Use the wheel to choose between eligible names after those decisions have been made.</p><h2>Enter names in Options, one person per item</h2><p>Open Options on the left, select Import, and paste one display name per line. You can also type names individually or import one column from an Excel workbook. The current editor accepts up to 100 options, keeps labels to 36 characters, and reads <code>.xlsx</code> or <code>.xls</code> files up to 5 MB. Import only the name column; emails, student numbers, attendance notes, and private accommodations do not belong on a public wheel.</p><ol><li>Remove anyone who is absent or not eligible for this activity.</li><li>Use the name each participant expects the group to see.</li><li>Add a last initial only when two visible names would otherwise be identical.</li><li>Check spelling and duplicates in the preview.</li><li>Choose Replace wheel so the fictional starter names do not remain.</li></ol><h2>Keep equal weights when every name should have the same chance</h2><p>All starter names have a weight of 1. With twelve names, each begins at about 8.3% of the total. Advanced shows the stored weight and displayed percentage for every item. If one name has weight 2 while the other eleven stay at 1, that person has two shares out of thirteen—not a 2% chance.</p><p>Changing weights can be appropriate only when the rule is stated and understood, such as giving a volunteer pool extra entries by agreement. It should not be used quietly to target or avoid a participant. If the group expects equal selection, leave every weight at 1 and show the percentages before spinning.</p><h2>Choose whether names may repeat</h2><h3>One question, repeats allowed</h3><p>Turn Remove winner off when the same person can reasonably be selected again in a later independent round. This can suit a casual game where every spin starts from the full group.</p><h3>One turn per person</h3><p>Leave Remove winner on for a presentation order, reading round, or activity in which every eligible person should appear once before anyone repeats. A selected name leaves the wheel, so the remaining percentages update after each result. Start a fresh session when the whole group becomes eligible again.</p><h2>A calmer classroom routine</h2><p>Explain the task, show the eligible names, confirm the repeat rule, and give everyone thinking time before the spin. After the result, say the name once and allow a short transition rather than treating the animation as pressure. If a student has an agreed opt-out or alternative participation plan, apply it before the wheel is loaded—not after their name appears.</p><p>For a full speaking order, keep Remove winner on and continue until the list is empty. For one answer, stop after the first result. Re-spinning because the chosen person is inconvenient undermines the published rule; correct the eligibility list first if someone should not have been included.</p><h2>Three setups beyond classroom roll call</h2><ul><li><strong>Presentation order:</strong> load presenter display names, turn Remove winner on, and keep Results as the running order.</li><li><strong>Meeting roles:</strong> replace names with eligible facilitators, note takers, or timekeepers and spin separately for each role.</li><li><strong>Team activity:</strong> put team names on the wheel rather than every individual when the next turn belongs to a group.</li></ul><p>If you need a planned list of roles as well as a list of people, switch to Turn Queue: put people in Options and roles or time slots in Queue. Classic remains clearer when every spin answers the same “who goes next?” question.</p><h2>Use Results as session notes, not as an attendance record</h2><p>Results shows the selected sequence and View all rounds opens the fuller session history. CSV export can preserve the order for an informal activity. It does not prove attendance, participation quality, consent, or grading evidence. Check official records separately and do not publish a results file that exposes names without a valid reason.</p><h2>Why use Spinanywheel for a name picker</h2><p>The complete eligible list and each displayed percentage stay visible, unlike a hidden draw from a private spreadsheet. Remove winner supports a no-repeat round, Advanced reveals any unequal weights, Results records the sequence, and Excel import avoids retyping a prepared roster. You can also adjust contrast, pointer position, stage, sound, and timing for the room without changing the names themselves.</p><p>For a complete walkthrough of Options, Excel import, Advanced, sharing, and Results, read <a href=\"/blog/how-to-use-spin-the-wheel\">How to Use Spin the Wheel</a>. The picker is designed for transparent, low-stakes participation—not grading, discipline, employment, medical, legal, or other decisions that require human judgment.</p>"
   }
 ]

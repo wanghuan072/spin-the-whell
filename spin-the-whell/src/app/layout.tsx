@@ -25,13 +25,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: homeTdk.title,
-    template: "%s | Spin the Wheel",
+    template: "%s | Spinanywheel",
   },
   description: homeTdk.description,
   applicationName: siteConfig.name,
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  authors: [{ name: "Spin the Wheel Team", url: "/legal/about-us" }],
+  authors: [{ name: "Spinanywheel Team", url: "/legal/about-us" }],
   category: "game",
   formatDetection: {
     email: false,

@@ -1,0 +1,51 @@
+type BrandWheelMarkProps = {
+  className?: string;
+};
+
+export function BrandWheelMark({ className }: BrandWheelMarkProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 76 64"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M8 18C14 5 52-1 67 15"
+        fill="none"
+        stroke="#ff6b73"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      />
+      <circle cx="8" cy="18" r="3.2" fill="#ffe071" stroke="#17102c" strokeWidth="1.5" />
+      <circle cx="67" cy="15" r="2.7" fill="#56d6cf" stroke="#17102c" strokeWidth="1.5" />
+
+      <g transform="rotate(-4 38 33)">
+        <rect x="8" y="5" width="60" height="56" rx="18" fill="#17102c" stroke="#fff1dc" strokeWidth="2" />
+        <path d="M12 18C19 8 33 5 46 8" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" opacity=".18" />
+
+        <circle cx="38" cy="34" r="23" fill="#241443" stroke="#ffe071" strokeWidth="2.4" />
+        <path d="M38 12a22 22 0 0 1 15.56 6.44L38 34Z" fill="#ff5d68" />
+        <path d="M53.56 18.44A22 22 0 0 1 60 34H38Z" fill="#ffad29" />
+        <path d="M60 34a22 22 0 0 1-6.44 15.56L38 34Z" fill="#b9d93b" />
+        <path d="M53.56 49.56A22 22 0 0 1 38 56V34Z" fill="#18c8bd" />
+        <path d="M38 56a22 22 0 0 1-15.56-6.44L38 34Z" fill="#2f8df4" />
+        <path d="M22.44 49.56A22 22 0 0 1 16 34h22Z" fill="#7458e8" />
+        <path d="M16 34a22 22 0 0 1 6.44-15.56L38 34Z" fill="#b548d8" />
+        <path d="M22.44 18.44A22 22 0 0 1 38 12v22Z" fill="#f04491" />
+        <circle cx="38" cy="34" r="8.2" fill="#fff4df" stroke="#17102c" strokeWidth="2.4" />
+        <path
+          d="M42.7 29.4c-1.1-1.3-2.8-2-4.7-2-2.1 0-3.7.9-3.7 2.3 0 1.5 1.4 2 4.1 2.5 3.4.7 5 1.9 5 4.4 0 2.8-2.4 4.7-5.8 4.7-2.7 0-5-1-6.5-2.8"
+          fill="none"
+          stroke="#d93675"
+          strokeWidth="2.7"
+          strokeLinecap="round"
+        />
+        <path d="M38 4.5 31.7 15h12.6Z" fill="#ffe071" stroke="#17102c" strokeWidth="2" strokeLinejoin="round" />
+      </g>
+
+      <path d="m70 38 1.6 3.8 3.9 1.6-3.9 1.6-1.6 3.8-1.6-3.8-3.9-1.6 3.9-1.6Z" fill="#ffe071" />
+      <path d="m7 47 1 2.3 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1Z" fill="#f277ff" />
+    </svg>
+  );
+}

@@ -11,8 +11,8 @@ export function getTemplateBySlug(slug: string) {
   return templates.find((template) => template.addressBar === slug);
 }
 
-export function getFeaturedTemplates(limit = 4) {
-  return templates.slice(0, limit);
+export function getHomeTemplates() {
+  return templates.filter((template) => template.isHome);
 }
 
 export function getTemplatesByCategory(category: string) {

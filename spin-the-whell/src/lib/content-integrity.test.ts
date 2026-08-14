@@ -7,7 +7,7 @@ import home from "@/data/home/home.json";
 import templates from "@/data/templates/templates.json";
 import { legalTdk, pageTdk } from "@/seo/tdk";
 
-type SeoRecord = { title: string; description: string };
+type SeoRecord = { title: string; description: string; keywords: string[] };
 
 const seoRecords: SeoRecord[] = [
   ...Object.values(pageTdk),
@@ -68,9 +68,12 @@ describe("static content integrity", () => {
   it("keeps SEO titles and descriptions within useful snippet ranges", () => {
     for (const seo of seoRecords) {
       expect(seo.title.length, seo.title).toBeGreaterThanOrEqual(25);
-      expect(seo.title.length, seo.title).toBeLessThanOrEqual(65);
+      expect(seo.title.length, seo.title).toBeLessThanOrEqual(60);
       expect(seo.description.length, seo.description).toBeGreaterThanOrEqual(110);
       expect(seo.description.length, seo.description).toBeLessThanOrEqual(170);
+      expect(seo.description.toLowerCase(), `${seo.title}: missing brand in description`).toContain("spinanywheel");
+      expect(seo.keywords.map((keyword) => keyword.toLowerCase()), `${seo.title}: missing brand keyword`)
+        .toContain("spinanywheel");
     }
   });
 
@@ -90,6 +93,7 @@ describe("static content integrity", () => {
     expect(new Set(templates.map((template) => template.title)).size).toBe(templates.length);
 
     for (const template of templates) {
+      expect(typeof template.isHome, `${template.title}: isHome must be explicit`).toBe("boolean");
       expect(validModes.has(template.runMode), `${template.title}: invalid mode`).toBe(true);
       expect(validCategories.has(template.category), `${template.title}: invalid scenario`).toBe(true);
       expect(template.reviewSummary.trim(), `${template.title}: review summary is missing`).not.toBe("");
@@ -115,7 +119,15 @@ describe("static content integrity", () => {
       "NBA Player Spin The Wheel",
       "Games Spin The Wheel",
       "Movie Spin The Wheel",
+      "Spin the Wheel Names",
     ]));
+
+    expect(templates.filter((template) => template.isHome).map((template) => template.title)).toEqual([
+      "Event Raffle Wheel",
+      "Spin The Wheel Yes Or No",
+      "Color Spin The Wheel",
+      "Country Spin The Wheel",
+    ]);
   });
 
   it("uses a unique optimized screenshot for every template", () => {

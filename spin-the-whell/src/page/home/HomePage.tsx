@@ -3,7 +3,7 @@ import Link from "next/link";
 import { WheelGame } from "@/features/wheel/components/WheelGame";
 import { absoluteUrl } from "@/config/site";
 import homeContentData from "@/data/home/home.json";
-import { getTemplates } from "@/lib/templates";
+import { getHomeTemplates } from "@/lib/templates";
 import { JsonLd } from "@/seo/JsonLd";
 import { getStaticSitemapRoute } from "@/seo/routes";
 import { getPageTdk } from "@/seo/tdk";
@@ -22,7 +22,7 @@ const {
 } = homeContentData as HomeContent;
 
 export function HomePage() {
-  const templates = getTemplates().slice(0, 8);
+  const templates = getHomeTemplates();
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -66,9 +66,9 @@ export function HomePage() {
             <span>for names, choices &amp; prize rounds</span>
           </h1>
           <p className={styles.heroLead}>
-            Paste a list, use Classic for one result or Turn Queue for a planned series,
-            then spin. Adjust the odds, colors, stage, and timing when you need them—no
-            account required.
+            Spinanywheel lets you paste a list, use Classic for one result or Turn Queue
+            for a planned series, then spin. Adjust the odds, colors, stage, and timing
+            when you need them—no account required.
           </p>
           <div className={styles.heroActions}>
             <a href="#wheel-game" className={styles.btnPrimary}>
@@ -126,11 +126,11 @@ export function HomePage() {
         <div className="container">
           <header className={`${styles.sectionHead} ${styles.sectionHeadRow}`}>
             <div>
-              <p className={styles.kicker}>Ready-made setups</p>
-              <h2>Start with the event raffle setup</h2>
+              <p className={styles.kicker}>Popular starting points</p>
+              <h2>Four useful wheels to start with</h2>
               <p>
-                The template library is being rebuilt. For now, open the event raffle,
-                replace the sample names and prize tiers, then adjust the style to suit the room.
+                Run a prize draw, settle a yes-or-no question, choose a color, or pick a
+                country. Each template opens with a working list you can edit before the first spin.
               </p>
             </div>
             <Link href="/templates" className={styles.btnGhost}>View all templates</Link>
@@ -144,7 +144,7 @@ export function HomePage() {
               >
                 <div className={styles.templateImage}>
                   <Image
-                    src={template.imageUrl}
+                    src={template.cardImageUrl}
                     alt={template.imageAlt}
                     width={420}
                     height={280}

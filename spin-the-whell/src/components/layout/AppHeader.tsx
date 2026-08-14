@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { HeaderAuth } from "@/components/auth/HeaderAuth";
+import { BrandWheelMark } from "@/components/brand/BrandWheelMark";
 import { primaryNavigation } from "@/config/navigation";
 import styles from "@/style/layout/AppHeader.module.css";
 
@@ -35,17 +36,11 @@ export function AppHeader() {
   return (
     <header className={styles["app-header"]}>
       <div className={`container ${styles["app-header-content"]}`}>
-        <Link href="/" className={styles["brand-link"]} aria-label="Spin the Wheel home">
-          <span className={styles["brand-mark"]} aria-hidden="true">
-            <svg viewBox="0 0 48 48" role="img">
-              <path d="M24 4v40M4 24h40M9.9 9.9l28.2 28.2M38.1 9.9 9.9 38.1" />
-              <circle cx="24" cy="24" r="18" />
-              <circle cx="24" cy="24" r="4" />
-            </svg>
-          </span>
+        <Link href="/" className={styles["brand-link"]} aria-label="Spin Any Wheel home">
+          <BrandWheelMark className={styles["brand-mark"]} />
           <span className={styles["brand-copy"]}>
             <strong>Spin</strong>
-            <span>the Wheel</span>
+            <span>Any Wheel</span>
           </span>
         </Link>
 

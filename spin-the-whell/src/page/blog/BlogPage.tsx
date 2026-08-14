@@ -35,7 +35,7 @@ export function BlogPage() {
     <main id="main-content">
       <PageHero
         eyebrow="Practical setup guides for real wheel sessions"
-        title={blogTdk.title}
+        title="Spin the Wheel Blog - Practical Setup and Play Guides"
         description={blogTdk.description}
         actions={
           <>

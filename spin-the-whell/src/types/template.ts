@@ -11,6 +11,8 @@ import type { TemplateCategoryId } from "@/config/template-categories";
 
 export type WheelTemplate = {
   id: number;
+  /** Explicit editorial selection for the homepage template grid. */
+  isHome: boolean;
   title: string;
   description: string;
   imageUrl: string;

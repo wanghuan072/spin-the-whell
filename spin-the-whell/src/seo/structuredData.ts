@@ -33,7 +33,7 @@ export const wheelAppSchema = {
   "@type": "WebApplication",
   "@id": absoluteUrl("/#wheel-app"),
   name: "Spin the Wheel - Free Online Random Picker",
-  alternateName: siteConfig.name,
+  alternateName: [siteConfig.name, siteConfig.displayName],
   url: siteConfig.url,
   image: absoluteUrl(siteConfig.ogImage),
   isPartOf: { "@id": websiteId },

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Stylized classroom board</title>
+  <desc id="desc">A dark teal classroom board with warm wood trim, simple name cards, and desk silhouettes.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121934"/>
+      <stop offset=".55" stop-color="#17264a"/>
+      <stop offset="1" stop-color="#25183e"/>
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123d43"/>
+      <stop offset="1" stop-color="#0b2536"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b4a2b"/>
+      <stop offset=".5" stop-color="#d28a45"/>
+      <stop offset="1" stop-color="#7a3b26"/>
+    </linearGradient>
+    <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
+      <path d="M70 0H0V70" fill="none" stroke="#d9fff7" stroke-opacity=".055" stroke-width="2"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020617" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#wall)"/>
+  <circle cx="170" cy="130" r="260" fill="#2dd4bf" opacity=".07"/>
+  <circle cx="1450" cy="150" r="310" fill="#a855f7" opacity=".08"/>
+  <g filter="url(#shadow)">
+    <rect x="85" y="70" width="1430" height="675" rx="38" fill="url(#wood)"/>
+    <rect x="112" y="96" width="1376" height="620" rx="23" fill="url(#board)" stroke="#f7d39b" stroke-opacity=".38" stroke-width="3"/>
+    <rect x="112" y="96" width="1376" height="620" rx="23" fill="url(#grid)"/>
+  </g>
+  <g fill="none" stroke="#e5fff8" stroke-linecap="round" opacity=".42">
+    <path d="M205 196h230" stroke-width="12"/>
+    <path d="M205 238h160" stroke-width="7"/>
+    <path d="M1180 190h166" stroke-width="9"/>
+    <path d="M1180 226h106" stroke-width="6"/>
+  </g>
+  <g transform="translate(126 390) rotate(-4)">
+    <rect width="205" height="94" rx="15" fill="#ffd75e"/>
+    <circle cx="35" cy="47" r="17" fill="#f97370"/>
+    <path d="M70 34h101M70 58h76" stroke="#54331d" stroke-width="9" stroke-linecap="round" opacity=".65"/>
+  </g>
+  <g transform="translate(1268 355) rotate(5)">
+    <rect width="205" height="94" rx="15" fill="#fb7185"/>
+    <circle cx="35" cy="47" r="17" fill="#38bdf8"/>
+    <path d="M70 34h101M70 58h76" stroke="#4c1021" stroke-width="9" stroke-linecap="round" opacity=".6"/>
+  </g>
+  <g fill="#c7fff4" opacity=".34">
+    <circle cx="231" cy="598" r="11"/><circle cx="275" cy="598" r="11"/><circle cx="319" cy="598" r="11"/>
+    <circle cx="1280" cy="575" r="11"/><circle cx="1324" cy="575" r="11"/><circle cx="1368" cy="575" r="11"/>
+  </g>
+  <path d="M0 805 190 730h1220l190 75v95H0Z" fill="#0b1024" opacity=".96"/>
+  <path d="M0 827h1600" stroke="#f4b75e" stroke-opacity=".5" stroke-width="6"/>
+  <g fill="#253251">
+    <path d="M75 900v-95h300v95zM465 900v-95h300v95zM835 900v-95h300v95zM1225 900v-95h300v95z"/>
+  </g>
+</svg>

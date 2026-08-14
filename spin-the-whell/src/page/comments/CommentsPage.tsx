@@ -89,8 +89,8 @@ export function CommentsPage() {
             <p className={styles.eyebrow}>Community</p>
             <h1>Spin the Wheel Comments - Share Your Ideas and Feedback</h1>
             <p className={styles.lede}>
-              Tell us how you use the wheel, suggest a template or feature, or leave
-              practical feedback that could make the site more useful for everyone.
+              Tell Spinanywheel how you use the wheel, suggest a template or feature,
+              or leave practical feedback that could make the site more useful for everyone.
             </p>
           </div>
           <aside className={styles.communityCard} aria-label="Ways to contribute">

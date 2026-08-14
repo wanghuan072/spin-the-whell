@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandWheelMark } from "@/components/brand/BrandWheelMark";
 import { legalNavigation } from "@/config/legal";
 import { primaryNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
@@ -13,9 +14,9 @@ export function AppFooter() {
     <footer className={styles["app-footer"]}>
       <div className={`container ${styles["app-footer-content"]}`}>
         <div className={styles["footer-brand"]}>
-          <Link href="/" className={styles["footer-logo"]} aria-label={`${siteConfig.name} home`}>
-            <span className={styles["footer-wheel"]} aria-hidden="true" />
-            <strong>{siteConfig.name}</strong>
+          <Link href="/" className={styles["footer-logo"]} aria-label={`${siteConfig.displayName} home`}>
+            <BrandWheelMark className={styles["footer-wheel"]} />
+            <strong>{siteConfig.displayName}</strong>
           </Link>
           <p>{siteConfig.description}</p>
         </div>
@@ -57,4 +58,3 @@ export function AppFooter() {
     </footer>
   );
 }
-

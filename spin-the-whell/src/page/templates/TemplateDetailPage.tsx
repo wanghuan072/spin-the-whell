@@ -77,7 +77,7 @@ export function TemplateDetailPage({ template }: TemplateDetailPageProps) {
           <div className={styles["template-wheel-content"]}>
             <div className={styles["section-heading"]}>
               <p>Ready to spin</p>
-              <h2>Spin the {template.title}</h2>
+              <h2>Try {template.title}</h2>
               <span>
                 {template.runMode === "turn-queue"
                   ? "This preset opens with separate wheel options and an ordered Queue. Read the setup guide below before replacing both lists."

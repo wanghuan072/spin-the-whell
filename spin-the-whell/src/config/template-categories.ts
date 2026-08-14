@@ -10,6 +10,7 @@ export const TEMPLATE_CATEGORIES = [
   { id: "all", name: "All scenarios" },
   { id: "Events", name: "Events" },
   { id: "Decisions", name: "Decisions" },
+  { id: "Education", name: "Education" },
   { id: "Geography", name: "Geography" },
   { id: "Games", name: "Games" },
   { id: "Sports", name: "Sports" },

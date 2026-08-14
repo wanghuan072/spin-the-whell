@@ -1,13 +1,15 @@
 export const siteConfig = {
-  name: "Spin the Wheel",
-  shortName: "SpinWheel",
+  name: "Spinanywheel",
+  displayName: "Spin Any Wheel",
+  productName: "Spin the Wheel",
+  shortName: "Spinanywheel",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://spinanywheel.com").replace(/\/+$/, ""),
   description:
-    "A free online Spin the Wheel for classrooms, parties, giveaways, and everyday choices—edit your list, pick a fairness mode, and spin in the browser.",
+    "Spinanywheel is a free online Spin the Wheel for classrooms, parties, giveaways, and everyday choices—edit a list, choose a mode, and spin in your browser.",
   locale: "en_US",
   language: "en",
   ogImage: "/images/og-image.png",
-  ogImageAlt: "Spin the Wheel free online random picker",
+  ogImageAlt: "Spinanywheel free online Spin the Wheel random picker",
 };
 
 export function absoluteUrl(path = "/") {

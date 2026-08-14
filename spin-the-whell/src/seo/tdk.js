@@ -4,7 +4,7 @@
  * Detail pages keep seo in their own data files (templates.json, posts.json).
  *
  * Targets:
- * - title: 40–60 characters
+ * - title: 25–60 characters
  * - description: 140–160 characters
  * - include the page's primary keyword naturally
  */
@@ -14,10 +14,11 @@
 /** @type {Record<string, TdkRecord>} */
 export const pageTdk = {
   home: {
-    title: "Spin the Wheel - Free Online Random Picker",
+    title: "Spin the Wheel | Spinanywheel - Free Online Random Picker",
     description:
-      "Spin a custom wheel in Classic or Turn Queue mode. Import a list, adjust visible weights and styles, review results, and export a CSV—no account required.",
+      "Spinanywheel is a free online random picker. Build a Spin the Wheel in Classic or Turn Queue mode, adjust odds and styles, review results, and export CSV.",
     keywords: [
+      "spinanywheel",
       "spin the wheel",
       "spin the wheel online",
       "random picker wheel",
@@ -28,10 +29,11 @@ export const pageTdk = {
     ],
   },
   templates: {
-    title: "Spin the Wheel Templates - Common Setups for Everyday Picks",
+    title: "Spin the Wheel Templates - Ready-Made Picker Setups",
     description:
-      "I've collected common Spin the Wheel templates for decisions, classrooms, games, events, and more. Have a better setup in mind? Share it in Comments.",
+      "Explore common Spin the Wheel templates on Spinanywheel for decisions, classrooms, games, events, sports, and creative activities, then edit any setup.",
     keywords: [
+      "spinanywheel",
       "spin the wheel templates",
       "event raffle wheel",
       "random picker templates",
@@ -39,10 +41,11 @@ export const pageTdk = {
     ],
   },
   blog: {
-    title: "Spin the Wheel Blog - Practical Setup and Play Guides",
+    title: "Spin the Wheel Blog - Practical Guides | Spinanywheel",
     description:
-      "Read practical Spin the Wheel guides based on the current editor: lists and Excel import, styles, Results, Turn Queue prize draws, group rounds, and product limits.",
+      "Read the Spinanywheel blog for practical Spin the Wheel guides covering options, Excel import, styles, Results, Turn Queue prize draws, and group rounds.",
     keywords: [
+      "spinanywheel",
       "spin the wheel blog",
       "how to use spin the wheel",
       "spin wheel setup guide",
@@ -51,10 +54,11 @@ export const pageTdk = {
     ],
   },
   comments: {
-    title: "Spin the Wheel Comments - Share Your Ideas and Feedback",
+    title: "Spin the Wheel Comments - Ideas & Feedback | Spinanywheel",
     description:
-      "Tell us how you use Spin the Wheel, suggest a template or feature, and share practical feedback that may help shape the site and support other visitors.",
+      "Share ideas and feedback with Spinanywheel. Suggest a Spin the Wheel template or feature and explain how you use the random picker with your group.",
     keywords: [
+      "spinanywheel",
       "spin the wheel comments",
       "wheel spinner community",
       "random picker feedback",
@@ -66,10 +70,11 @@ export const pageTdk = {
 /** @type {Record<string, TdkRecord>} */
 export const legalTdk = {
   "privacy-policy": {
-    title: "Spin the Wheel - Privacy Policy for Users",
+    title: "Privacy Policy - Spinanywheel",
     description:
-      "Read the Spin the Wheel Privacy Policy to learn what stays in your browser, how local settings work, what server logs may collect, and how to contact us.",
+      "Read the Spinanywheel Privacy Policy to learn what stays in your browser, how local wheel settings and comments work, what providers process, and how to contact us.",
     keywords: [
+      "spinanywheel",
       "spin the wheel privacy policy",
       "privacy policy",
       "spin the wheel privacy",
@@ -77,10 +82,11 @@ export const legalTdk = {
     ],
   },
   "terms-of-service": {
-    title: "Spin the Wheel - Terms of Service Online",
+    title: "Terms of Service - Spinanywheel",
     description:
-      "Review the Spin the Wheel Terms of Service covering acceptable use, randomness limits, intellectual property, disclaimers, and how to reach our team by email.",
+      "Review the Spinanywheel Terms of Service covering acceptable use, randomness limits, intellectual property, disclaimers, and how to contact our team.",
     keywords: [
+      "spinanywheel",
       "spin the wheel terms",
       "terms of service",
       "terms of use",
@@ -88,10 +94,11 @@ export const legalTdk = {
     ],
   },
   copyright: {
-    title: "Spin the Wheel Copyright Notice & Rights",
+    title: "Copyright Notice - Spinanywheel",
     description:
-      "See the Spin the Wheel copyright notice for site ownership, permitted use, user-uploaded content rules, and how to send a copyright complaint by email.",
+      "Read the Spinanywheel copyright notice for site ownership, permitted use, user-uploaded content, third-party rights, and copyright complaint instructions.",
     keywords: [
+      "spinanywheel",
       "spin the wheel copyright",
       "copyright notice",
       "intellectual property",
@@ -99,10 +106,11 @@ export const legalTdk = {
     ],
   },
   "about-us": {
-    title: "About Spin the Wheel - Our Free Online Tool",
+    title: "About Spinanywheel - Free Online Random Picker",
     description:
-      "Learn about Spin the Wheel, a free online picker for decisions, classrooms, parties, and giveaways, with custom lists, visual styles, and Turn Queue rounds.",
+      "Learn about Spinanywheel, the brand behind a free online Spin the Wheel for decisions, classrooms, parties, games, and giveaways with editable visual rounds.",
     keywords: [
+      "spinanywheel",
       "about spin the wheel",
       "spin the wheel about us",
       "random picker tool",
@@ -110,10 +118,11 @@ export const legalTdk = {
     ],
   },
   "contact-us": {
-    title: "Spin the Wheel - Contact Us & Support Help",
+    title: "Contact Spinanywheel - Support and Feedback",
     description:
-      "Contact Spin the Wheel by email for privacy questions, copyright notices, product feedback, and general support. No form is needed—just write wyong@spinanywheel.com.",
+      "Contact Spinanywheel by email for privacy questions, copyright notices, template corrections, product feedback, partnerships, and general support.",
     keywords: [
+      "spinanywheel",
       "contact spin the wheel",
       "spin the wheel email",
       "spin the wheel support",

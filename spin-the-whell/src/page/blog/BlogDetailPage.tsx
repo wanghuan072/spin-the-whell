@@ -13,10 +13,10 @@ type BlogDetailPageProps = {
 
 export function BlogDetailPage({ post }: BlogDetailPageProps) {
   const relatedPosts = getBlogPosts().filter((item) => item.id !== post.id).slice(0, 2);
-  const pageHeading = post.seo?.title || post.title;
+  const seoTitle = post.seo?.title || post.title;
   const schemas = [
     webPageSchema({
-      name: pageHeading,
+      name: seoTitle,
       description: post.seo.description || post.intro,
       path: `/blog/${post.addressBar}`,
       dateModified: post.updatedDate,
@@ -34,7 +34,7 @@ export function BlogDetailPage({ post }: BlogDetailPageProps) {
       <article>
         <PageHero
           eyebrow={`${post.category} · ${post.readTime}`}
-          title={pageHeading}
+          title={post.title}
           description={post.seo?.description || post.intro}
           actions={
             <div className={styles["hero-byline"]}>
