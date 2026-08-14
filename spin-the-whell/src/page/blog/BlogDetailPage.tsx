@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArticleToc } from "@/components/blog/ArticleToc";
 import { PageHero } from "@/components/layout/PageHero";
 import { formatPublishDate, getBlogPosts } from "@/lib/blog";
 import { JsonLd } from "@/seo/JsonLd";
@@ -76,17 +77,7 @@ export function BlogDetailPage({ post }: BlogDetailPageProps) {
         <section className={styles["article-body-section"]}>
           <div className="container">
             <div className={styles["article-layout"]}>
-              <nav className={styles["article-toc"]} aria-label="Article contents">
-                <p>Article guide</p>
-                <strong>On this page</strong>
-                <ol>
-                  {articleNavigation.headings.map((heading) => (
-                    <li key={heading.id}>
-                      <a href={`#${heading.id}`}>{heading.label}</a>
-                    </li>
-                  ))}
-                </ol>
-              </nav>
+              <ArticleToc headings={articleNavigation.headings} />
 
               <div className={styles["article-main"]}>
                 <div className={styles["review-note"]}>
@@ -100,6 +91,7 @@ export function BlogDetailPage({ post }: BlogDetailPageProps) {
             {/* detailsHtml 来自项目内受信任的静态 JSON，不接收用户输入。 */}
                 <div
                   className={styles["article-copy"]}
+                  data-article-copy
                   dangerouslySetInnerHTML={{ __html: articleNavigation.html }}
                 />
               </div>
