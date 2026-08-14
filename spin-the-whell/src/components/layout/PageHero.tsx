@@ -13,7 +13,7 @@ type PageHeroProps = {
 export function PageHero({ eyebrow, title, description, actions, aside }: PageHeroProps) {
   return (
     <section className={styles.hero}>
-      <div className={`container ${styles.inner}`}>
+      <div className={`container ${styles.inner} ${aside ? styles.hasAside : styles.solo}`}>
         <div className={styles.copy}>
           {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
           <h1>{title}</h1>

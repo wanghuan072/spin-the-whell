@@ -123,7 +123,7 @@ describe("static content integrity", () => {
     ]));
 
     expect(templates.filter((template) => template.isHome).map((template) => template.title)).toEqual([
-      "Event Raffle Wheel",
+      "Raffle Wheel",
       "Spin The Wheel Yes Or No",
       "Color Spin The Wheel",
       "Country Spin The Wheel",

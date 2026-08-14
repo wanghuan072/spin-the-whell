@@ -18,7 +18,7 @@
     },
     {
       "question": "What do the left and right panels control?",
-      "answer": "Left side manages the list: Options (add, edit, sort, shuffle, paste/Excel import), Results (history, view all rounds, CSV download), Advanced (weights, text/slice colors, slice images), and Queue when Turn Queue is on. Right side styles the show: Look (slice style and wheel face), Chrome (pointer, rim, lights), and Stage (backdrop and winner celebration)."
+      "answer": "Left side manages the list: Options (add, edit, sort, shuffle, paste/Excel import), Results (history, view all rounds, CSV download), Advanced (weights, text/slice colors, slice images), and Queue when Turn Queue is on. Right side styles the show: Wheel (skin and wheel face), Frame (pointer, rim, lights), and Stage (backdrop and winner celebration)."
     },
     {
       "question": "Can the wheel remove a winner after each spin?",
@@ -54,7 +54,7 @@
       "number": "03",
       "label": "Dress the stage",
       "title": "Set the look, pointer, and stage",
-      "copy": "Use the right-side Look, Chrome, and Stage tabs for slice style, pointer, rim lights, backdrop, and celebration. Open fullscreen for a projector, keep sound on if the room likes ticks, and choose a spin duration that does not slow down the session."
+      "copy": "Use the right-side Wheel, Frame, and Stage tabs for wheel skin, pointer, rim lights, backdrop, and celebration. Open fullscreen for a projector, keep sound on if the room likes ticks, and choose a spin duration that does not slow down the session."
     },
     {
       "number": "04",
@@ -125,6 +125,11 @@
         "One-off decisions and simple draws",
         "Optional Remove winner between spins",
         "Weights only when the group agrees"
+      ],
+      "facts": [
+        { "label": "List setup", "value": "One wheel list with one result at a time" },
+        { "label": "Round flow", "value": "Spin, record, then keep or remove the winner" },
+        { "label": "Switch when", "value": "A second ordered list needs fixed turns" }
       ]
     },
     {
@@ -132,11 +137,16 @@
       "label": "Turn Queue",
       "title": "Turn Queue for planned people or prize rounds",
       "copy": "Best when structure matters: event raffles with 3rd / 2nd / 1st counts, or each student getting two turns. Names stay on the wheel; Queue holds the rounds. Draw lower prizes first if winners should leave before first place.",
-      "href": "/templates/event-raffle-wheel",
+      "href": "/templates/raffle-wheel",
       "points": [
         "People or prizes with their own turn counts",
         "Queue highlight shows the live round",
         "Works with Remove winner for no-repeat draws"
+      ],
+      "facts": [
+        { "label": "List setup", "value": "Wheel options plus a separate ordered Queue" },
+        { "label": "Round flow", "value": "Highlight a round, spin, then advance automatically" },
+        { "label": "Switch when", "value": "People or prize tiers need planned counts" }
       ]
     }
   ],

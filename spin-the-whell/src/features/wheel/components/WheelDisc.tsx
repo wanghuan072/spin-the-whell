@@ -133,58 +133,58 @@ export function WheelDisc({
         <defs>
           {/* 材质纹理只覆盖默认扇区层，单项图片与颜色仍在其上方。 */}
           <pattern id={`${uid}-paper-grain`} width="8" height="8" patternUnits="userSpaceOnUse">
-            <circle cx="1.5" cy="2" r="0.7" fill="#ffffff" fillOpacity="0.2" />
-            <circle cx="6" cy="5.5" r="0.55" fill="#0f172a" fillOpacity="0.12" />
-            <path d="M0 7.5L8 6.5" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="0.7" />
+            <circle cx="1.5" cy="2" r="0.65" fill="#ffffff" fillOpacity="0.24" />
+            <circle cx="6" cy="5.5" r="0.5" fill="#2d235d" fillOpacity="0.08" />
+            <path d="M0 7.5L8 6.5" stroke="#ffffff" strokeOpacity="0.1" strokeWidth="0.7" />
           </pattern>
           <linearGradient id={`${uid}-glass-finish`} x1="20" y1="20" x2="178" y2="182" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.5" />
-            <stop offset="24%" stopColor="#ffffff" stopOpacity="0.08" />
-            <stop offset="50%" stopColor="#ffffff" stopOpacity="0.28" />
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.58" />
+            <stop offset="24%" stopColor="#ffffff" stopOpacity="0.1" />
+            <stop offset="50%" stopColor="#ffffff" stopOpacity="0.32" />
             <stop offset="58%" stopColor="#ffffff" stopOpacity="0.02" />
-            <stop offset="100%" stopColor="#020617" stopOpacity="0.32" />
+            <stop offset="100%" stopColor="#1b2557" stopOpacity="0.24" />
           </linearGradient>
           <pattern
             id={`${uid}-retro-stripes`}
             width="9"
             height="9"
             patternUnits="userSpaceOnUse"
-            patternTransform="rotate(-16)"
+            patternTransform="rotate(-12)"
           >
-            <rect width="3" height="9" fill="#fff7d6" fillOpacity="0.16" />
-            <rect x="6" width="1" height="9" fill="#3f1d0b" fillOpacity="0.12" />
+            <rect width="3" height="9" fill="#ffffff" fillOpacity="0.14" />
+            <rect x="6" width="1" height="9" fill="#2f2766" fillOpacity="0.09" />
           </pattern>
           <radialGradient id={`${uid}-retro-vignette`} cx="50%" cy="42%" r="64%">
-            <stop offset="0%" stopColor="#fff7d6" stopOpacity="0.18" />
-            <stop offset="68%" stopColor="#7c2d12" stopOpacity="0" />
-            <stop offset="100%" stopColor="#431407" stopOpacity="0.28" />
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.2" />
+            <stop offset="68%" stopColor="#5641a5" stopOpacity="0" />
+            <stop offset="100%" stopColor="#241c56" stopOpacity="0.22" />
           </radialGradient>
           <pattern id={`${uid}-neon-grid`} width="10" height="10" patternUnits="userSpaceOnUse">
-            <circle cx="1.5" cy="1.5" r="0.9" fill="#f0abfc" fillOpacity="0.34" />
-            <path d="M0 9.5H10M9.5 0V10" stroke="#22d3ee" strokeOpacity="0.1" strokeWidth="0.7" />
+            <circle cx="1.5" cy="1.5" r="0.85" fill="#c7b5ff" fillOpacity="0.32" />
+            <path d="M0 9.5H10M9.5 0V10" stroke="#5ed8f4" strokeOpacity="0.1" strokeWidth="0.7" />
           </pattern>
           <pattern
             id={`${uid}-ink-hatch`}
             width="7"
             height="7"
             patternUnits="userSpaceOnUse"
-            patternTransform="rotate(22)"
+            patternTransform="rotate(24)"
           >
-            <path d="M0 1H7M0 5H7" stroke="#ffffff" strokeOpacity="0.2" strokeWidth="1" />
-            <circle cx="5.5" cy="3" r="0.75" fill="#0f172a" fillOpacity="0.28" />
+            <path d="M0 1H7M0 5H7" stroke="#ffffff" strokeOpacity="0.16" strokeWidth="0.8" />
+            <circle cx="5.5" cy="3" r="0.65" fill="#172554" fillOpacity="0.18" />
           </pattern>
           <radialGradient id={`${uid}-porcelain-glaze`} cx="36%" cy="24%" r="78%">
             <stop offset="0%" stopColor="#ffffff" stopOpacity="0.58" />
             <stop offset="36%" stopColor="#ffffff" stopOpacity="0.12" />
             <stop offset="78%" stopColor="#ffffff" stopOpacity="0" />
-            <stop offset="100%" stopColor="#64748b" stopOpacity="0.12" />
+            <stop offset="100%" stopColor="#7467a5" stopOpacity="0.1" />
           </radialGradient>
           {resolvedLook === "radial" ? (
             <radialGradient id={`${uid}-radial-sheen`} cx="50%" cy="50%" r="50%">
               <stop offset="0%" stopColor="#ffffff" stopOpacity="0.38" />
-              <stop offset="34%" stopColor="#22d3ee" stopOpacity="0.12" />
+              <stop offset="34%" stopColor="#62d7ef" stopOpacity="0.12" />
               <stop offset="68%" stopColor="#ffffff" stopOpacity="0" />
-              <stop offset="100%" stopColor="#f0abfc" stopOpacity="0.16" />
+              <stop offset="100%" stopColor="#b493ff" stopOpacity="0.16" />
             </radialGradient>
           ) : null}
           {segments.map((segment) => {
@@ -392,9 +392,9 @@ function DiscMaterialFinish({ uid, look, subdued }: DiscMaterialFinishProps) {
   if (look === "radial") {
     return (
       <g fill="none" opacity={opacityScale}>
-        <circle cx="100" cy="100" r="31" stroke="#22d3ee" strokeOpacity="0.32" strokeWidth="1.2" />
-        <circle cx="100" cy="100" r="58" stroke="#f0abfc" strokeDasharray="3 6" strokeOpacity="0.36" strokeWidth="1.2" />
-        <circle cx="100" cy="100" r="86" stroke="#67e8f9" strokeOpacity="0.2" strokeWidth="1" />
+        <circle cx="100" cy="100" r="31" stroke="#62d7ef" strokeOpacity="0.32" strokeWidth="1.2" />
+        <circle cx="100" cy="100" r="58" stroke="#c1a8ff" strokeDasharray="3 6" strokeOpacity="0.36" strokeWidth="1.2" />
+        <circle cx="100" cy="100" r="86" stroke="#7ce2f2" strokeOpacity="0.2" strokeWidth="1" />
       </g>
     );
   }
@@ -403,7 +403,7 @@ function DiscMaterialFinish({ uid, look, subdued }: DiscMaterialFinishProps) {
     return (
       <g fill="none" opacity={opacityScale}>
         <circle cx="100" cy="100" r="82" stroke="#ffffff" strokeDasharray="1.5 5" strokeOpacity="0.38" strokeWidth="1.2" />
-        <circle cx="100" cy="100" r="28" stroke="#0f172a" strokeOpacity="0.58" strokeWidth="3" />
+        <circle cx="100" cy="100" r="28" stroke="#172554" strokeOpacity="0.5" strokeWidth="2.4" />
       </g>
     );
   }

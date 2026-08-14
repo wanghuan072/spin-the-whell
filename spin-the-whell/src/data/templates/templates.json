@@ -2,13 +2,13 @@
   {
     "id": 1,
     "isHome": true,
-    "title": "Event Raffle Wheel",
-    "description": "Run several prize tiers from one participant list. Turn Queue keeps the draw order visible while Remove winner prevents duplicate winners.",
+    "title": "Raffle Wheel",
+    "description": "Draw third, second, and first prize winners from one name list. Turn Queue tracks each prize round, while Remove winner can prevent repeat winners.",
     "imageUrl": "/images/templates/screenshots/event-raffle-wheel.webp",
-    "imageAlt": "Event Raffle Wheel editor with participant names and a three-tier prize queue",
-    "addressBar": "event-raffle-wheel",
-    "updatedDate": "2026-08-12",
-    "reviewSummary": "The sample names, three-tier 3–2–1 prize sequence, Turn Queue limits, and no-repeat winner behavior were tested as one live-draw workflow.",
+    "imageAlt": "Raffle Wheel with participant names and a three-tier prize queue",
+    "addressBar": "raffle-wheel",
+    "updatedDate": "2026-08-14",
+    "reviewSummary": "The 8-name starter list, three-tier 3–2–1 prize sequence, Turn Queue limits, Remove winner setting, and Results export were checked against the current wheel.",
     "category": "Events",
     "entries": [
       "Alex Kim",
@@ -44,28 +44,54 @@
       }
     ],
     "source": {
-      "label": "editorial setup",
-      "checkedAt": "2026-08-10",
-      "scope": "8 sample names"
+      "label": "feature-checked starter setup",
+      "checkedAt": "2026-08-14",
+      "scope": "8 sample names, 3 prize tiers, 6 scheduled draws"
     },
     "seo": {
-      "title": "Event Raffle Wheel - Spin The Wheel Templates | Spinanywheel",
-      "description": "Use Spinanywheel's Event Raffle Wheel to put participant names in Options and prize tiers in Turn Queue, remove winners, and export the finished draw.",
+      "title": "Raffle Wheel - Spin The Wheel Templates | Spinanywheel",
+      "description": "Use Spinanywheel's free Raffle Wheel to draw prize tiers from up to 100 names, remove winners between rounds, and export results as CSV.",
       "keywords": [
         "spinanywheel",
-        "event raffle wheel",
+        "raffle wheel",
+        "free raffle wheel",
         "multi prize draw wheel",
-        "turn queue raffle",
-        "prize giveaway wheel"
+        "prize tier wheel"
       ]
     },
-    "detailsHtml": "<h2>Plan the raffle before names go on the wheel</h2><p>An event raffle is easiest to trust when the rules are settled before the room sees the first spin. Decide who is eligible, whether one person may win more than once, what happens when a winner is absent, and whether staff or organizers are excluded. Then clean the participant list. Two people can share a name, so use a non-sensitive identifier such as “Alex K. — Table 4” when the audience needs to distinguish them. Do not place phone numbers, email addresses, ticket codes, or other private information on a wheel that will be projected or shared.</p><h2>Why this preset uses Turn Queue</h2><p>Options contains the participant names; Queue contains the prize order. The preset starts with three third-prize draws, two second-prize draws, and one first-prize draw. That is different from putting prizes and people on the same wheel: each spin answers one question—who receives the prize currently shown in Queue?</p><h3>A sensible prize order</h3><p>Lower-value prizes are placed first so the largest prize remains the finale. If your event promises another order, edit Queue before the draw. Set each prize tier's turn limit to the number available, and use labels the audience will recognize, such as “Bronze prize — 5 winners” rather than an internal stock code.</p><h2>Run the draw where everyone can follow it</h2><ol><li>Import or paste the final participant list and announce the eligible count.</li><li>Open Queue and read the prize order aloud.</li><li>Confirm that <strong>Remove winner</strong> is on when prizes must go to different people.</li><li>Use Full screen for the live draw, but keep Results available to confirm the exact selected name.</li><li>Pause after each tier so the host and record keeper agree before continuing.</li></ol><p>The wheel's motion creates a clear shared moment; Queue prevents the host from losing track of which prize is being awarded. Sound can add energy in a room, but it should stay optional for quiet venues and accessibility needs.</p><h2>Write a redraw rule that covers real event problems</h2><p>“We will redraw if needed” is too vague. Specify what counts: an ineligible entry, a duplicate record, an absent winner after a stated claim period, or a technical interruption before a result is recorded. A spelling mistake is normally corrected in Results rather than used to discard a valid outcome. If Remove winner is on, do not quietly add a selected person back for a later prize unless the published rules allow multiple wins.</p><blockquote><p>Useful host wording: “We have 120 eligible names, winners cannot repeat, and an absent winner has two minutes to respond before one redraw.”</p></blockquote><h2>What the Results history proves—and what it does not</h2><p>Results gives the event team an ordered round list, while View all rounds, download, and share make the sequence easier to reconcile after the stage closes. Export it promptly and keep it with the event notes. A browser history is useful operational evidence, but it is not a certified lottery system, an identity check, or proof that the imported list itself was complete. For a regulated promotion, paid raffle, or high-value public drawing, obtain the required rules and use an approved process for the relevant jurisdiction.</p><h2>Why use this wheel instead of separate slips and spreadsheets</h2><p>The main advantage is that the participant pool, prize sequence, no-repeat rule, and result order remain visible in one interface. Import handles a prepared list, Advanced can correct an individual display label, and Reset makes it possible to rehearse with sample names before loading the real file. The value is not “more randomness” than every other method; it is fewer handoffs between the host, the prize sheet, and the result recorder.</p>",
+    "detailsHtml": "<h2>What this Raffle Wheel is set up to do</h2><p>This preset is built for a multi-prize draw where the wheel selects people and a separate Queue keeps track of the prize being awarded. The eight names are examples, not a recommended guest list. Replace them with eligible participants, then edit the three Queue rows to match the prizes you actually have. The starter order schedules third prize for three spins, second prize for two, and first prize for one.</p><div class=\"data-table-wrap\"><table><caption>Starter Raffle Wheel setup</caption><thead><tr><th>Area</th><th>Starter data</th><th>What to replace</th></tr></thead><tbody><tr><td>Options</td><td>8 sample names</td><td>Your eligible participant labels</td></tr><tr><td>Queue</td><td>3rd prize ×3, 2nd prize ×2, 1st prize ×1</td><td>Your prize names and winner counts</td></tr><tr><td>Remove winner</td><td>On</td><td>Keep it on only when repeat winners are not allowed</td></tr></tbody></table></div><h2>Prepare a participant list people can verify</h2><p>Set the eligibility rule before loading names: registration deadline, age or attendance requirements, staff exclusions, and whether one person can hold more than one valid entry. Two participants may share a name, so add a short, non-sensitive identifier such as “Alex K. — Table 4” when the host needs to tell them apart. Do not display email addresses, phone numbers, ticket codes, or other private data on a wheel that may be projected or shared.</p><p>Options accepts up to <strong>100 items</strong>, with labels up to 36 characters. For a short list, edit the names directly. For a prepared list, paste values separated by lines, commas, semicolons, or tabs. File import accepts an Excel <code>.xlsx</code> or <code>.xls</code> workbook up to 5 MB and lets you choose the worksheet and name column. The current editor does not upload CSV files; CSV is the result download format.</p><h2>Build prize tiers in Turn Queue</h2><p>Keep people in Options and prizes in Queue. Mixing both into one wheel can produce a prize name when the host needs a winner. Each Queue item has a label and a turn limit: “Door prize” with five turns schedules five winners before the next Queue item begins. A label can contain up to 36 characters, one item can receive 1–99 turns, and a Queue can contain up to 200 items. Those are product limits, not a suggestion to run a 200-tier live event.</p><p>Lower-value prizes often come first so previous winners can leave the eligible pool before the headline prize. That order is not universally correct. Use the sequence stated in your event rules, and do not reorder prizes after seeing a result.</p><h2>Decide the repeat-winner rule before the first spin</h2><p>This template opens with <strong>Remove winner</strong> enabled. After a completed result, the selected option is removed before the next spin, which supports one-prize-per-person events. The setting can be turned off when the published rules allow the same participant to win again. Before starting, compare the total scheduled Queue turns with the number of eligible names: six no-repeat prizes need at least six valid Options.</p><blockquote><p>Clear host wording: “The final list contains 96 eligible names. Remove winner is on, so each person can win once. An absent winner has two minutes to respond before one announced redraw.”</p></blockquote><h2>Run the draw so the room can follow it</h2><ol><li>Show the final participant count and explain how duplicate names are distinguished.</li><li>Open Queue and read the prize order and winner count for each tier.</li><li>Confirm the Remove winner setting and the redraw rule on screen.</li><li>Check that Now Playing names the correct prize, then spin once.</li><li>Read the result card aloud and wait for the round to appear in Results.</li><li>Confirm the Queue progress before moving to the next winner.</li><li>After the final tier, open View all rounds and download the CSV if a record is needed.</li></ol><p>Full screen can make the wheel easier to follow on a projector. Sound may add energy in a busy room, but it should remain optional for quiet venues and people sensitive to repeated audio.</p><h2>Write a redraw rule for real event problems</h2><p>“We will redraw if needed” leaves too much room for improvisation. State whether a redraw applies to an ineligible entry, a duplicated record, an absent winner after a defined claim period, or a technical interruption before the result was recorded. A spelling correction does not normally invalidate an otherwise eligible winner. If the host makes a change, explain it to the room and keep a note beside the downloaded results.</p><h2>What Results records—and what it cannot prove</h2><p>Results preserves the round order, selected entry, active Queue item, its turn number, run mode, and recorded time. View all rounds makes the sequence easier to review, and CSV export gives the organizer a file for event notes. This is useful operational history, but it does not prove that the imported list was complete, verify a winner identity, store published rules, or provide an independent audit.</p><p>For a regulated promotion, paid raffle, public fundraising draw, or high-value prize, check the rules that apply in the relevant jurisdiction and use an approved process where required. Spinanywheel is a browser-based random picker for informal events; it is not certified lottery or gambling software.</p><h2>Where this template is a practical fit</h2><ul><li><strong>Company celebrations:</strong> draw several recognition gifts from one attendee list.</li><li><strong>Conference door prizes:</strong> keep sponsor prizes in a visible, announced order.</li><li><strong>Community events:</strong> run an informal no-repeat giveaway after eligibility has been checked.</li><li><strong>Livestream giveaways:</strong> show the active prize and preserve the result sequence for the host team.</li></ul><p>For a single winner or a list that can repeat freely, Classic mode is simpler. Turn Queue earns its place when the event has an ordered prize plan and the host needs the interface to remember which tier is active.</p><h2>Why use the Spinanywheel Raffle Wheel</h2><p>The practical advantage is coordination, not a claim of “better randomness” than every other method. Names, prize order, no-repeat behavior, live progress, and the result sequence stay in one interface. That means fewer handoffs between a paper prize sheet, a separate spinner, and a results spreadsheet. You can rehearse with the sample names, reset the template, then load the final list when the rules and Queue are ready.</p>",
     "stageImage": "/images/templates/stages/festival-stage.webp",
     "pointerStyle": "jewel",
     "rimStyle": "classic",
     "lightsStyle": "classic",
     "pointerPosition": "top",
-    "cardImageUrl": "/images/templates/screenshots/event-raffle-wheel-latest.webp"
+    "cardImageUrl": "/images/templates/screenshots/event-raffle-wheel-latest.webp",
+    "faqItems": [
+      {
+        "question": "How do I use the Raffle Wheel for multiple prize tiers?",
+        "answer": "Put eligible participant names in Options and put prizes in Turn Queue. Set each Queue item's turn count to the number of winners needed, then run the Queue in the same order announced in your event rules."
+      },
+      {
+        "question": "How many names can I add to the Raffle Wheel?",
+        "answer": "The current wheel accepts up to 100 Options, and each visible label can contain up to 36 characters. Use short, non-sensitive identifiers when two participants share a name."
+      },
+      {
+        "question": "Can I upload a CSV participant list?",
+        "answer": "Not as a file. You can paste a list or import one column from an .xlsx or .xls workbook up to 5 MB. CSV is available for downloading the finished Results history."
+      },
+      {
+        "question": "Can the Raffle Wheel prevent repeat winners?",
+        "answer": "Yes. This preset starts with Remove winner on, so a selected name leaves the eligible wheel after the result completes. The setting can be turned off when your published rules allow repeat winners."
+      },
+      {
+        "question": "Does the Raffle Wheel keep a record of each prize draw?",
+        "answer": "Results records the selected name, Queue prize, Queue turn, round order, mode, and time for the current browser session. You can review all rounds and download the sequence as CSV."
+      },
+      {
+        "question": "Is Spinanywheel a certified raffle or lottery system?",
+        "answer": "No. It is a browser-based random picker for informal events. Regulated promotions, paid raffles, fundraising draws, and high-value prizes may require published rules, approved software, or other controls in your jurisdiction."
+      }
+    ]
   },
   {
     "id": 2,

@@ -1,7 +1,7 @@
 export type ThemeMode = "day" | "night";
 
 export const THEME_STORAGE_KEY = "spin-theme";
-export const DEFAULT_THEME: ThemeMode = "night";
+export const DEFAULT_THEME: ThemeMode = "day";
 
 export function isThemeMode(value: unknown): value is ThemeMode {
   return value === "day" || value === "night";
@@ -23,7 +23,7 @@ export function applyTheme(theme: ThemeMode) {
 
   const meta = document.querySelector('meta[name="theme-color"]');
   if (meta) {
-    meta.setAttribute("content", theme === "night" ? "#07091f" : "#f4f6fa");
+    meta.setAttribute("content", theme === "night" ? "#0b0e1d" : "#f7f8fe");
   }
 }
 

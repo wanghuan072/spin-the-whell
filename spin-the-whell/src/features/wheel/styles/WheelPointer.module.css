@@ -1,5 +1,5 @@
 .pointer {
-  --pointer-shadow-color: oklch(20% 0.05 30 / 45%);
+  --pointer-shadow-color: rgb(50 38 102 / 32%);
   --pointer-block-offset: -22px;
   --pointer-inline-offset: -8px;
   --wheel-pointer-accent: #fef08a;
@@ -61,147 +61,174 @@
 
 /* 每种造型拥有独立的材质与配色，避免只更换轮廓却仍像同一枚指针。 */
 .style-needle {
-  --pointer-shadow-color: rgb(14 165 233 / 44%);
+  --pointer-shadow-color: rgb(69 132 232 / 34%);
   --pointer-block-offset: -17px;
   --pointer-inline-offset: -2px;
-  --wheel-pointer-top: #a5f3fc;
-  --wheel-pointer-mid: #22d3ee;
-  --wheel-pointer-bottom: #2563eb;
-  --wheel-pointer-border: #082f49;
-  --wheel-pointer-shine: rgb(236 254 255 / 78%);
-  --wheel-pointer-rim-top: #f8fafc;
-  --wheel-pointer-rim-bottom: #94a3b8;
-  --wheel-pointer-rim-stroke: #334155;
-  --wheel-pointer-jewel-light: #ecfeff;
-  --wheel-pointer-jewel: #06b6d4;
-  --wheel-pointer-accent: #fde047;
-  --wheel-pointer-detail: #082f49;
-  --wheel-pointer-line: rgb(236 254 255 / 86%);
+  --wheel-pointer-top: #c8f4ff;
+  --wheel-pointer-mid: #58bce9;
+  --wheel-pointer-bottom: #5366dc;
+  --wheel-pointer-border: #344796;
+  --wheel-pointer-shine: rgb(255 255 255 / 70%);
+  --wheel-pointer-rim-top: #ffffff;
+  --wheel-pointer-rim-bottom: #d8d0ff;
+  --wheel-pointer-rim-stroke: #7565c5;
+  --wheel-pointer-jewel-light: #fff2f7;
+  --wheel-pointer-jewel: #ff6f98;
+  --wheel-pointer-accent: #ffe27a;
+  --wheel-pointer-detail: #4d3b9c;
+  --wheel-pointer-line: rgb(255 255 255 / 88%);
 }
 
 .style-jewel {
-  --pointer-shadow-color: rgb(244 63 94 / 42%);
+  --pointer-shadow-color: rgb(139 75 224 / 38%);
   --pointer-block-offset: -17px;
   --pointer-inline-offset: -2px;
-  --wheel-pointer-top: #fb7185;
-  --wheel-pointer-mid: #e11d48;
-  --wheel-pointer-bottom: #881337;
-  --wheel-pointer-border: #5f1234;
-  --wheel-pointer-shine: rgb(255 228 230 / 66%);
-  --wheel-pointer-rim-top: #fde68a;
-  --wheel-pointer-rim-bottom: #f59e0b;
-  --wheel-pointer-rim-stroke: #92400e;
-  --wheel-pointer-jewel-light: #fdf2f8;
-  --wheel-pointer-jewel: #f43f5e;
-  --wheel-pointer-accent: #f9a8d4;
-  --wheel-pointer-detail: #831843;
-  --wheel-pointer-line: rgb(255 241 242 / 78%);
+  --wheel-pointer-top: #c795ff;
+  --wheel-pointer-mid: #8b5cf6;
+  --wheel-pointer-bottom: #5e36c9;
+  --wheel-pointer-border: #4d2daf;
+  --wheel-pointer-shine: rgb(255 255 255 / 55%);
+  --wheel-pointer-rim-top: #ffffff;
+  --wheel-pointer-rim-bottom: #eadfff;
+  --wheel-pointer-rim-stroke: #8062d2;
+  --wheel-pointer-jewel-light: #fff4fa;
+  --wheel-pointer-jewel: #f14f9b;
+  --wheel-pointer-accent: #ffcf5c;
+  --wheel-pointer-detail: #4e2c9d;
+  --wheel-pointer-line: rgb(250 247 255 / 82%);
 }
 
 .style-arrow {
-  --pointer-shadow-color: rgb(249 115 22 / 42%);
+  --pointer-shadow-color: rgb(227 74 111 / 34%);
   --pointer-block-offset: -21px;
   --pointer-inline-offset: -6px;
-  --wheel-pointer-top: #fde047;
-  --wheel-pointer-mid: #fb923c;
-  --wheel-pointer-bottom: #ea580c;
-  --wheel-pointer-border: #7c2d12;
-  --wheel-pointer-shine: rgb(255 251 235 / 72%);
-  --wheel-pointer-rim-top: #22d3ee;
-  --wheel-pointer-rim-bottom: #0284c7;
-  --wheel-pointer-rim-stroke: #0c4a6e;
-  --wheel-pointer-jewel-light: #ecfeff;
-  --wheel-pointer-jewel: #06b6d4;
-  --wheel-pointer-accent: #172554;
-  --wheel-pointer-detail: #fff7ed;
-  --wheel-pointer-line: rgb(255 247 237 / 88%);
+  --wheel-pointer-top: #ffb487;
+  --wheel-pointer-mid: #ff738f;
+  --wheel-pointer-bottom: #d94683;
+  --wheel-pointer-border: #a52e69;
+  --wheel-pointer-shine: rgb(255 255 255 / 62%);
+  --wheel-pointer-rim-top: #ffffff;
+  --wheel-pointer-rim-bottom: #e9e2ff;
+  --wheel-pointer-rim-stroke: #7d68c6;
+  --wheel-pointer-jewel-light: #fff8e8;
+  --wheel-pointer-jewel: #ffd268;
+  --wheel-pointer-accent: #2d3267;
+  --wheel-pointer-detail: #392d72;
+  --wheel-pointer-line: rgb(255 248 251 / 90%);
 }
 
 .style-chevron {
-  --pointer-shadow-color: rgb(168 85 247 / 45%);
+  --pointer-shadow-color: rgb(102 71 218 / 42%);
   --pointer-block-offset: -22px;
   --pointer-inline-offset: -8px;
-  --wheel-pointer-top: #c084fc;
-  --wheel-pointer-mid: #8b5cf6;
-  --wheel-pointer-bottom: #4c1d95;
-  --wheel-pointer-border: #2e1065;
-  --wheel-pointer-shine: rgb(243 232 255 / 68%);
-  --wheel-pointer-rim-top: #bef264;
-  --wheel-pointer-rim-bottom: #65a30d;
-  --wheel-pointer-rim-stroke: #365314;
-  --wheel-pointer-jewel-light: #ecfccb;
-  --wheel-pointer-jewel: #84cc16;
-  --wheel-pointer-accent: #22d3ee;
-  --wheel-pointer-detail: #2e1065;
-  --wheel-pointer-line: rgb(236 254 255 / 84%);
+  --wheel-pointer-top: #bd93ff;
+  --wheel-pointer-mid: #7157e8;
+  --wheel-pointer-bottom: #303999;
+  --wheel-pointer-border: #29296d;
+  --wheel-pointer-shine: rgb(250 246 255 / 60%);
+  --wheel-pointer-rim-top: #9af0ff;
+  --wheel-pointer-rim-bottom: #45aadd;
+  --wheel-pointer-rim-stroke: #246eaf;
+  --wheel-pointer-jewel-light: #f1ffca;
+  --wheel-pointer-jewel: #a8df55;
+  --wheel-pointer-accent: #c9ff63;
+  --wheel-pointer-detail: #29276f;
+  --wheel-pointer-line: rgb(239 252 255 / 86%);
 }
 
 .style-ticket {
-  --pointer-shadow-color: rgb(20 184 166 / 40%);
+  --pointer-shadow-color: rgb(30 150 141 / 34%);
   --pointer-block-offset: -21px;
   --pointer-inline-offset: -6px;
-  --wheel-pointer-top: #99f6e4;
-  --wheel-pointer-mid: #2dd4bf;
-  --wheel-pointer-bottom: #0f766e;
-  --wheel-pointer-border: #134e4a;
-  --wheel-pointer-shine: rgb(240 253 250 / 72%);
-  --wheel-pointer-rim-top: #fef3c7;
-  --wheel-pointer-rim-bottom: #f59e0b;
-  --wheel-pointer-rim-stroke: #92400e;
-  --wheel-pointer-jewel-light: #fefce8;
-  --wheel-pointer-jewel: #facc15;
-  --wheel-pointer-accent: #fff7ed;
-  --wheel-pointer-detail: #134e4a;
-  --wheel-pointer-line: rgb(240 253 250 / 90%);
+  --wheel-pointer-top: #b6f2e7;
+  --wheel-pointer-mid: #47c9b7;
+  --wheel-pointer-bottom: #16867f;
+  --wheel-pointer-border: #17675f;
+  --wheel-pointer-shine: rgb(255 255 255 / 68%);
+  --wheel-pointer-rim-top: #fff4c9;
+  --wheel-pointer-rim-bottom: #e8ad43;
+  --wheel-pointer-rim-stroke: #a9792d;
+  --wheel-pointer-jewel-light: #fff8df;
+  --wheel-pointer-jewel: #f3c74f;
+  --wheel-pointer-accent: #fff8ea;
+  --wheel-pointer-detail: #17675f;
+  --wheel-pointer-line: rgb(245 255 253 / 90%);
 }
 
 .style-claw {
-  --pointer-shadow-color: rgb(59 130 246 / 44%);
+  --pointer-shadow-color: rgb(71 90 220 / 42%);
   --pointer-block-offset: -22px;
   --pointer-inline-offset: -7px;
-  --wheel-pointer-top: #60a5fa;
-  --wheel-pointer-mid: #2563eb;
-  --wheel-pointer-bottom: #1e3a8a;
-  --wheel-pointer-border: #172554;
-  --wheel-pointer-shine: rgb(219 234 254 / 68%);
-  --wheel-pointer-rim-top: #e2e8f0;
-  --wheel-pointer-rim-bottom: #64748b;
-  --wheel-pointer-rim-stroke: #334155;
-  --wheel-pointer-jewel-light: #d9f99d;
-  --wheel-pointer-jewel: #84cc16;
-  --wheel-pointer-accent: #bef264;
-  --wheel-pointer-detail: #172554;
-  --wheel-pointer-line: rgb(239 246 255 / 82%);
+  --wheel-pointer-top: #73c8ff;
+  --wheel-pointer-mid: #5867e9;
+  --wheel-pointer-bottom: #302b91;
+  --wheel-pointer-border: #242968;
+  --wheel-pointer-shine: rgb(235 247 255 / 62%);
+  --wheel-pointer-rim-top: #ffe979;
+  --wheel-pointer-rim-bottom: #f09e35;
+  --wheel-pointer-rim-stroke: #9f681d;
+  --wheel-pointer-jewel-light: #ffeff7;
+  --wheel-pointer-jewel: #f462aa;
+  --wheel-pointer-accent: #ff6eaa;
+  --wheel-pointer-detail: #242968;
+  --wheel-pointer-line: rgb(242 248 255 / 84%);
 }
 
 .style-compass {
-  --pointer-shadow-color: rgb(54 32 16 / 52%);
+  --pointer-shadow-color: rgb(28 46 59 / 46%);
   --pointer-block-offset: -17px;
   --pointer-inline-offset: -2px;
-  --wheel-pointer-border: #2f1d12;
-  --wheel-pointer-shine: rgb(255 243 189 / 58%);
-  --wheel-pointer-rim-stroke: #4b2e16;
-  --wheel-pointer-line: rgb(255 241 168 / 76%);
+  --wheel-pointer-top: #ffe7a7;
+  --wheel-pointer-mid: #c7964e;
+  --wheel-pointer-bottom: #4e6875;
+  --wheel-pointer-border: #243c4a;
+  --wheel-pointer-shine: rgb(255 246 207 / 56%);
+  --wheel-pointer-rim-top: #f8dea0;
+  --wheel-pointer-rim-bottom: #7894a1;
+  --wheel-pointer-rim-stroke: #334f5e;
+  --wheel-pointer-jewel-light: #fff9e9;
+  --wheel-pointer-jewel: #5d8192;
+  --wheel-pointer-accent: #c94f5d;
+  --wheel-pointer-detail: #203b49;
+  --wheel-pointer-line: rgb(255 245 203 / 82%);
 }
 
 .style-court {
-  --pointer-shadow-color: rgb(3 7 18 / 58%);
+  --pointer-shadow-color: rgb(22 27 46 / 48%);
   --pointer-block-offset: -17px;
   --pointer-inline-offset: -2px;
-  --wheel-pointer-border: #020617;
-  --wheel-pointer-shine: rgb(248 250 252 / 58%);
-  --wheel-pointer-rim-stroke: #7c2d12;
-  --wheel-pointer-line: rgb(255 255 255 / 82%);
+  --wheel-pointer-top: #f5f7fb;
+  --wheel-pointer-mid: #69748b;
+  --wheel-pointer-bottom: #22283d;
+  --wheel-pointer-border: #1c2235;
+  --wheel-pointer-shine: rgb(255 255 255 / 54%);
+  --wheel-pointer-rim-top: #ffc27e;
+  --wheel-pointer-rim-bottom: #dc663f;
+  --wheel-pointer-rim-stroke: #843a2d;
+  --wheel-pointer-jewel-light: #fff0e1;
+  --wheel-pointer-jewel: #ed7544;
+  --wheel-pointer-accent: #ff6c72;
+  --wheel-pointer-detail: #252b41;
+  --wheel-pointer-line: rgb(255 255 255 / 86%);
 }
 
 .style-cinema {
-  --pointer-shadow-color: rgb(0 0 0 / 72%);
+  --pointer-shadow-color: rgb(7 10 27 / 62%);
   --pointer-block-offset: -18px;
   --pointer-inline-offset: -3px;
-  --wheel-pointer-border: #000000;
-  --wheel-pointer-shine: rgb(255 240 168 / 42%);
-  --wheel-pointer-rim-stroke: #7c511f;
-  --wheel-pointer-line: rgb(255 240 168 / 76%);
+  --wheel-pointer-top: #58617d;
+  --wheel-pointer-mid: #20263d;
+  --wheel-pointer-bottom: #0a0e20;
+  --wheel-pointer-border: #080b19;
+  --wheel-pointer-shine: rgb(255 240 190 / 40%);
+  --wheel-pointer-rim-top: #ffe8a3;
+  --wheel-pointer-rim-bottom: #b88839;
+  --wheel-pointer-rim-stroke: #765324;
+  --wheel-pointer-jewel-light: #fff7d6;
+  --wheel-pointer-jewel: #d7ad58;
+  --wheel-pointer-accent: #dfb861;
+  --wheel-pointer-detail: #11172b;
+  --wheel-pointer-line: rgb(255 237 179 / 82%);
 }
 
 .shadow {
@@ -211,7 +238,7 @@
 
 .body {
   stroke: var(--wheel-pointer-border);
-  stroke-width: 1.5;
+  stroke-width: 1.25;
   stroke-linejoin: round;
 }
 
@@ -221,7 +248,7 @@
 
 .rim {
   stroke: var(--wheel-pointer-rim-stroke);
-  stroke-width: 1.2;
+  stroke-width: 1.05;
 }
 
 .glint {

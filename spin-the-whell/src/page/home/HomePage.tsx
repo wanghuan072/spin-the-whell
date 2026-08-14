@@ -21,6 +21,15 @@ const {
   modeExamples,
 } = homeContentData as HomeContent;
 
+const capabilityItems = [
+  { code: "LIST", label: "Excel import" },
+  { code: "QUEUE", label: "Classic + Turn Queue" },
+  { code: "MODES", label: "Visible weights" },
+  { code: "RESULTS", label: "CSV results" },
+  { code: "SESSION", label: "Saved locally" },
+  { code: "TOOLS", label: "Fullscreen" },
+];
+
 export function HomePage() {
   const templates = getHomeTemplates();
   const faqSchema = {
@@ -57,67 +66,61 @@ export function HomePage() {
     <main id="main-content" className={styles.page}>
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
-          <p className={styles.kicker}>
-            <span className={styles.kickerDot} aria-hidden="true" />
-            No sign-in needed to spin · Saved locally
-          </p>
-          <h1 className={styles.brand}>
-            <span>Spin the Wheel</span>
-            <span>for names, choices &amp; prize rounds</span>
-          </h1>
-          <p className={styles.heroLead}>
-            Spinanywheel lets you paste a list, use Classic for one result or Turn Queue
-            for a planned series, then spin. Adjust the odds, colors, stage, and timing
-            when you need them—no account required.
-          </p>
-          <div className={styles.heroActions}>
-            <a href="#wheel-game" className={styles.btnPrimary}>
-              <BoltIcon /> Try the live wheel
-            </a>
-            <Link href="/templates" className={styles.btnGhost}>
-              Browse templates
-            </Link>
-            <Link href="/comments" className={styles.btnGhost}>
-              Leave a comment
-            </Link>
+          <div className={styles.heroCopy}>
+            <p className={styles.kicker}>
+              <ShieldMiniIcon />
+              No sign-in needed · Saved locally
+            </p>
+            <h1 className={styles.brand}>
+              <span>Spin the Wheel</span>
+              <span>for names, choices &amp; prize rounds</span>
+            </h1>
+            <p className={styles.heroLead}>
+              Paste a list, choose or plan a series, then spin. Adjust odds, colors,
+              stage, and timing — all in your browser. No account required.
+            </p>
+            <div className={styles.heroActions}>
+              <a href="#wheel-game" className={styles.btnPrimary}>
+                <BoltIcon /> Try the live wheel
+              </a>
+              <Link href="/templates" className={styles.btnGhost}>
+                <TemplateIcon /> Browse templates
+              </Link>
+              <Link href="/comments" className={styles.btnGhost}>
+                <CommentIcon /> Leave a comment
+              </Link>
+            </div>
           </div>
-          <ul className={styles.heroChips} aria-label="Quick highlights">
-            <li><ChipIcon name="LIST" /> Custom lists &amp; Excel import</li>
-            <li><ChipIcon name="QUEUE" /> Classic + Turn Queue</li>
-            <li><ChipIcon name="RESULTS" /> Results &amp; CSV export</li>
-            <li><ChipIcon name="LOOK" /> Wheel styles &amp; stage</li>
-          </ul>
+          <HeroChoiceGraphic />
         </div>
       </section>
 
-      <div className={styles.marquee} aria-hidden="true">
-        <div className={styles.marqueeTrack}>
-          {Array.from({ length: 2 }).map((_, loop) => (
-            <p key={loop}>
-              <span>No sign-in needed to spin</span>
-              <span>Saved locally</span>
-              <span>Classic + Turn Queue</span>
-              <span>Excel import</span>
-              <span>Visible weights</span>
-              <span>CSV results</span>
-              <span>Fullscreen</span>
-            </p>
+      <section className={styles.capabilityBar} aria-label="Wheel capabilities">
+        <div className={`container ${styles.capabilityGrid}`}>
+          {capabilityItems.map((item) => (
+            <div key={item.label}>
+              <Pictogram name={item.code} />
+              <span>{item.label}</span>
+            </div>
           ))}
         </div>
-      </div>
+      </section>
 
       <section id="wheel-game" className={styles.editor}>
         <div className="container">
-          <div className={styles.editorIntro}>
-            <p className={styles.kicker}>Build yours</p>
-            <h2>Set up the wheel on this page</h2>
-            <p>
-              Build the list on the left, style the wheel and stage on the right, and use
-              the toolbar for sound, timing, fullscreen, sharing, or reset.
-            </p>
-          </div>
-          <div className={styles.editorFrame}>
-            <WheelGame title="Spin the Wheel" />
+          <div className={styles.editorShell}>
+            <div className={styles.editorIntro}>
+              <div>
+                <p className={styles.kicker}>Build yours</p>
+                <h2>Set up the wheel your way</h2>
+              </div>
+              <p>
+                Add choices on the left, make it yours on the right, then spin from the center.
+              </p>
+            </div>
+            <div className={styles.editorFrame}>
+              <WheelGame title="Spin the Wheel" />
+            </div>
           </div>
         </div>
       </section>
@@ -127,13 +130,9 @@ export function HomePage() {
           <header className={`${styles.sectionHead} ${styles.sectionHeadRow}`}>
             <div>
               <p className={styles.kicker}>Popular starting points</p>
-              <h2>Four useful wheels to start with</h2>
-              <p>
-                Run a prize draw, settle a yes-or-no question, choose a color, or pick a
-                country. Each template opens with a working list you can edit before the first spin.
-              </p>
+              <h2>Pick a ready-made wheel</h2>
             </div>
-            <Link href="/templates" className={styles.btnGhost}>View all templates</Link>
+            <Link href="/templates" className={styles.textLink}>View all templates <ArrowIcon /></Link>
           </header>
           <div className={styles.templateGrid}>
             {templates.map((template) => (
@@ -151,9 +150,9 @@ export function HomePage() {
                   />
                 </div>
                 <div className={styles.templateBody}>
-                  <small>{template.category}</small>
                   <h3>{template.title}</h3>
-                  <span>Use this wheel <ArrowIcon /></span>
+                  <p>{template.description}</p>
+                  <span>Use template <ArrowIcon /></span>
                 </div>
               </Link>
             ))}
@@ -162,98 +161,103 @@ export function HomePage() {
       </section>
 
       <section id="features" className={styles.features}>
-        <div className="container">
-          <header className={styles.sectionHead}>
-            <p className={styles.kicker}>Controls at a glance</p>
-            <h2>Options on the left. Style on the right.</h2>
-            <p>
-              The left side controls entries and results. The right side controls how the
-              wheel and stage look. The toolbar handles the session itself.
-            </p>
-          </header>
-          <div className={styles.bento}>
-            {features.map((feature) => (
-              <article
-                key={feature.code}
-                className={`${styles.bentoCard} ${feature.span === "wide" ? styles.bentoWide : ""}`}
-              >
-                <div className={styles.bentoIcon} aria-hidden="true">
-                  <Pictogram name={feature.code} />
-                </div>
-                <p className={styles.bentoLabel}>{feature.label}</p>
+        <div className={`container ${styles.featureStrip}`}>
+          {features.map((feature) => (
+            <article key={feature.code}>
+              <div className={styles.bentoIcon} aria-hidden="true">
+                <Pictogram name={feature.code} />
+              </div>
+              <div>
                 <h3>{feature.title}</h3>
-                <p className={styles.bentoCopy}>{feature.copy}</p>
-              </article>
-            ))}
-          </div>
-          <header className={`${styles.sectionHead} ${styles.modeSectionHead}`}>
-            <p className={styles.kicker}>Two ways to play</p>
-            <h2>Classic or Turn Queue?</h2>
-            <p>
-              Use Classic for a single choice. Use Turn Queue when people, teams, or prize
-              tiers need a planned number of spins.
-            </p>
-          </header>
-          <div className={styles.modeGrid}>
-            {modeExamples.map((item, index) => (
-              <article
-                key={item.code}
-                className={`${styles.modeCard} ${index === 0 ? styles.modeClassic : styles.modeQueue}`}
-              >
-                <div className={styles.modeTop}>
-                  <div className={styles.whyIcon} aria-hidden="true">
-                    <Pictogram name={item.code} />
-                  </div>
-                  <p className={styles.bentoLabel}>{item.label}</p>
-                </div>
-                <h3>{item.title}</h3>
-                <p className={styles.modeCopy}>{item.copy}</p>
-                {item.points && item.points.length > 0 ? (
-                  <ul className={styles.modePoints}>
-                    {item.points.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
-                ) : null}
-                {item.href ? (
-                  <Link href={item.href} className={styles.modeLink}>
-                    Open example template <ArrowIcon />
-                  </Link>
-                ) : null}
-              </article>
-            ))}
-          </div>
+                <p>{feature.copy}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section id="how-to" className={styles.how}>
-        <div className="container">
-          <header className={styles.sectionHead}>
-            <p className={styles.kicker}>A simple four-step flow</p>
-            <h2>From your list to a result</h2>
-            <p>
-              Prepare the list, state the repeat and redraw rules, and then let the wheel
-              show the result.
-            </p>
-          </header>
-          <ol className={styles.howList}>
-            {howSteps.map((step) => (
-              <li id={`step-${step.number}`} key={step.number} className={styles.howItem}>
-                <div className={styles.howNum}>
-                  <span>Step</span>
-                  <strong>{step.number}</strong>
-                </div>
-                <div>
-                  <p className={styles.bentoLabel}>{step.label}</p>
-                  <h3>{step.title}</h3>
-                  <p>{step.copy}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <a href="#wheel-game" className={styles.inlineCta}>
-            <BoltIcon /> Back to the live wheel <ArrowIcon />
-          </a>
+      <section className={styles.summarySection}>
+        <div className={`container ${styles.summaryGrid}`}>
+          <article className={`${styles.summaryCard} ${styles.modes}`}>
+            <header>
+              <p className={styles.kicker}>Choose your flow</p>
+              <h2>Two ways to play</h2>
+            </header>
+            <div className={styles.modeGrid}>
+              {modeExamples.map((item) => (
+                <section key={item.code} className={styles.modeCard}>
+                  <div className={styles.modeTop}>
+                    <div className={styles.whyIcon} aria-hidden="true"><Pictogram name={item.code} /></div>
+                    <p className={styles.bentoLabel}>{item.label}</p>
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p className={styles.modeCopy}>{item.copy}</p>
+                  {item.points?.length ? (
+                    <ul className={styles.modePoints}>
+                      {item.points.map((point) => <li key={point}>{point}</li>)}
+                    </ul>
+                  ) : null}
+                  {item.facts?.length ? (
+                    <dl className={styles.modeFacts}>
+                      {item.facts.map((fact) => (
+                        <div key={fact.label}>
+                          <dt>{fact.label}</dt>
+                          <dd>{fact.value}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  ) : null}
+                  {item.href ? (
+                    <Link href={item.href} className={styles.modeLink}>Open example <ArrowIcon /></Link>
+                  ) : null}
+                </section>
+              ))}
+            </div>
+            <div className={styles.modeHint}>
+              <strong>Not sure which mode to choose?</strong>
+              <p>Start with Classic for a quick pick. You can switch to Turn Queue whenever the session needs an ordered plan.</p>
+            </div>
+          </article>
+
+          <article id="how-to" className={`${styles.summaryCard} ${styles.how}`}>
+            <header>
+              <p className={styles.kicker}>Simple by design</p>
+              <h2>From your list to a result</h2>
+            </header>
+            <ol className={styles.howList}>
+              {howSteps.map((step) => (
+                <li id={`step-${step.number}`} key={step.number} className={styles.howItem}>
+                  <div className={styles.howNum}><strong>{step.number}</strong></div>
+                  <div>
+                    <p className={styles.bentoLabel}>{step.label}</p>
+                    <h3>{step.title}</h3>
+                    <p>{step.copy}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <a href="#wheel-game" className={styles.inlineCta}>Open the live wheel <ArrowIcon /></a>
+          </article>
+
+          <section id="faq" className={`${styles.summaryCard} ${styles.faq}`}>
+            <header>
+              <p className={styles.kicker}>Quick answers</p>
+              <h2>FAQ</h2>
+            </header>
+            <div className={styles.faqGrid}>
+              {faqItems.map((item, index) => (
+                <article key={item.question} className={styles.faqItem}>
+                  <span className={styles.faqNumber} aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3>{item.question}</h3>
+                    <p>{item.answer}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
 
@@ -261,62 +265,70 @@ export function HomePage() {
         <div className={`container ${styles.trustInner}`}>
           <div className={styles.trustMark} aria-hidden="true"><ShieldIcon /></div>
           <div>
-            <p className={styles.kicker}>What stays private</p>
+            <p className={styles.kicker}>Private by default</p>
             <h2>Your list and history stay in this browser</h2>
             <p>
               Results use the browser&apos;s random generator and the visible weights you set.
-              Lists and history stay local. For a formal giveaway, publish separate rules
-              and use a system that meets the requirements of your event.
+              Share carries the setup, while your winner history stays local.
             </p>
           </div>
           <dl className={styles.trustFacts}>
-            <div><dt>Choices</dt><dd>2–100 options</dd></div>
-            <div><dt>Modes</dt><dd>Classic or Turn Queue</dd></div>
-            <div><dt>Records</dt><dd>CSV from Results</dd></div>
+            <div><dt>Choices</dt><dd>Up to 100</dd></div>
+            <div><dt>Modes</dt><dd>Classic + Queue</dd></div>
+            <div><dt>Records</dt><dd>CSV export</dd></div>
           </dl>
-        </div>
-      </section>
-
-      <section id="faq" className={styles.faq}>
-        <div className={`container ${styles.faqInner}`}>
-          <div className={styles.faqIntro}>
-            <p className={styles.kicker}>FAQ</p>
-            <h2>Common questions before you spin</h2>
-            <p>Odds, modes, imports, saved data, and what a shared link contains.</p>
-            <a href="#wheel-game" className={styles.btnGhost}>Open the wheel</a>
-          </div>
-          <div className={styles.faqList}>
-            {faqItems.map((item, index) => (
-              <details key={item.question} open={index === 0}>
-                <summary>
-                  <span>{item.question}</span>
-                  <i aria-hidden="true" />
-                </summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </div>
         </div>
       </section>
 
       <section className={styles.finalCta}>
         <div className={`container ${styles.finalInner}`}>
-          <p className={styles.kicker}>Your turn</p>
-          <h2>Ready for the first spin?</h2>
-          <p>Open the live wheel, or start from the multi-prize event raffle setup.</p>
-          <div className={styles.heroActions}>
-            <a href="#wheel-game" className={styles.btnPrimary}>
-              <BoltIcon /> Spin the wheel
-            </a>
-            <Link href="/templates/event-raffle-wheel" className={styles.btnGhost}>
-              Try the event raffle wheel
-            </Link>
+          <div className={styles.ideaIcon} aria-hidden="true">✦</div>
+          <div>
+            <h2>Have a better template idea?</h2>
+            <p>Tell us what you&apos;d love to see next.</p>
           </div>
+          <Link href="/comments#leave-a-comment" className={styles.btnPrimary}>
+            Leave a suggestion <ArrowIcon />
+          </Link>
         </div>
       </section>
 
       <JsonLd data={[pageSchema, wheelAppSchema, howToSchema, faqSchema]} />
     </main>
+  );
+}
+
+function HeroChoiceGraphic() {
+  const choices = [
+    { label: "Alex", icon: "●", className: styles.choiceAlex },
+    { label: "Bella", icon: "●", className: styles.choiceBella },
+    { label: "Chris", icon: "●", className: styles.choiceChris },
+    { label: "Pizza", icon: "△", className: styles.choicePizza },
+    { label: "Movie night", icon: "▣", className: styles.choiceMovie },
+    { label: "Prize", icon: "□", className: styles.choicePrize },
+  ];
+
+  return (
+    <div className={styles.heroGraphic} aria-hidden="true">
+      <svg className={styles.choicePath} viewBox="0 0 620 470" fill="none">
+        <path d="M115 94C224 36 307 94 256 181C207 264 326 285 430 220C526 160 563 260 493 329C418 403 295 391 238 319C185 252 113 258 97 190C84 136 121 101 115 94Z" />
+        <path d="M488 103c54 13 81 54 70 99" />
+      </svg>
+      {choices.map((choice) => (
+        <div key={choice.label} className={`${styles.choiceCard} ${choice.className}`}>
+          <span>{choice.icon}</span>{choice.label}
+        </div>
+      ))}
+      <div className={styles.selectedCard}>
+        <span>★</span>
+        <strong>Selected!</strong>
+      </div>
+      <div className={styles.cursorHand}>↖</div>
+      <div className={styles.trophy}>🏆</div>
+      <span className={`${styles.sparkle} ${styles.sparkleOne}`}>✦</span>
+      <span className={`${styles.sparkle} ${styles.sparkleTwo}`}>✧</span>
+      <span className={`${styles.sparkle} ${styles.sparkleThree}`}>★</span>
+    </div>
   );
 }
 
@@ -336,20 +348,39 @@ function BoltIcon() {
   );
 }
 
+function TemplateIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={styles.icon}>
+      <rect x="4" y="3" width="16" height="18" rx="3" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M8 8h8M8 12h5M8 16h8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function CommentIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={styles.icon}>
+      <path d="M5 5h14v11H9l-4 3V5Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M9 10h.01M12 10h.01M15 10h.01" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ShieldMiniIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={styles.icon}>
+      <path d="m12 3 7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3Z" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <path d="m9 12 2 2 4-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function ShieldIcon() {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true">
       <path d="M32 5 54 13v16c0 15-9 25-22 30C19 54 10 44 10 29V13L32 5Z" fill="none" stroke="currentColor" strokeWidth="3" />
       <path d="m21 31 7 7 15-16" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-  );
-}
-
-function ChipIcon({ name }: { name: string }) {
-  return (
-    <span className={styles.chipIcon} aria-hidden="true">
-      <Pictogram name={name} />
-    </span>
   );
 }
 
@@ -380,24 +411,12 @@ function Pictogram({ name }: { name: string }) {
       return <svg {...common}><path d="M6 34h36L36 18H12L6 34Z" /><path d="M18 18V12h12v6" /></svg>;
     case "TOOLS":
       return <svg {...common}><path d="M14 34 34 14" /><path d="M20 12h4l12 12-4 4-12-12V12Z" /><circle cx="14" cy="34" r="5" /></svg>;
-    case "CONTROL":
-      return <svg {...common}><path d="M8 14h32M8 24h32M8 34h32" /><circle cx="18" cy="14" r="3.5" fill="currentColor" stroke="none" /><circle cx="30" cy="24" r="3.5" fill="currentColor" stroke="none" /><circle cx="22" cy="34" r="3.5" fill="currentColor" stroke="none" /></svg>;
     case "MODES":
       return <svg {...common}><circle cx="24" cy="24" r="14" /><path d="M24 12v12l8 5" /></svg>;
-    case "CARDS":
-      return <svg {...common}><rect x="10" y="12" width="18" height="24" rx="3" /><rect x="20" y="10" width="18" height="24" rx="3" /></svg>;
     case "SESSION":
       return <svg {...common}><rect x="8" y="12" width="32" height="24" rx="3" /><path d="M14 20h12M14 26h20" /><circle cx="34" cy="32" r="6" /><path d="M34 29v6m-3-3h6" /></svg>;
     case "CLASSIC":
       return <svg {...common}><circle cx="24" cy="24" r="14" /><path d="M24 12v12l9 5" /></svg>;
-    case "ABC":
-      return <svg {...common}><rect x="8" y="10" width="32" height="26" rx="3" /><path d="m14 28 5-12 5 12m-8-5h6M28 16h6a4 4 0 0 1 0 8h-6v8" /></svg>;
-    case "TEAM":
-      return <svg {...common}><circle cx="17" cy="16" r="5" /><circle cx="31" cy="16" r="5" /><path d="M8 36c1-7 4-11 9-11s8 4 9 11m6-11c4 0 8 4 9 11" /></svg>;
-    case "GIFT":
-      return <svg {...common}><rect x="10" y="20" width="28" height="18" rx="2" /><path d="M8 20h32v-5H8zm14 0v23m4-23v23M22 15c-6-1-8-6-5-7s5 4 5 7Zm4 0c6-1 8-6 5-7s-5 4-5 7Z" /></svg>;
-    case "DAY":
-      return <svg {...common}><rect x="10" y="12" width="28" height="24" rx="3" /><path d="M10 20h28M16 8v8m16-8v8M16 28h6m6 0h6" /></svg>;
     default:
       return <svg {...common}><circle cx="24" cy="24" r="14" /></svg>;
   }

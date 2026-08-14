@@ -4,7 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { WheelGame } from "@/features/wheel/components/WheelGame";
 import { getRelatedTemplates } from "@/lib/templates";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbSchema, templateAppSchema, webPageSchema } from "@/seo/structuredData";
+import { breadcrumbSchema, faqPageSchema, templateAppSchema, webPageSchema } from "@/seo/structuredData";
 import styles from "@/style/page/templates/TemplateDetailPage.module.css";
 import type { WheelTemplate } from "@/types/template";
 
@@ -28,6 +28,7 @@ export function TemplateDetailPage({ template }: TemplateDetailPageProps) {
       { name: template.title, path: `/templates/${template.addressBar}` },
     ]),
     templateAppSchema(template),
+    ...(template.faqItems?.length ? [faqPageSchema(template.faqItems)] : []),
   ];
 
   return (
@@ -150,6 +151,20 @@ export function TemplateDetailPage({ template }: TemplateDetailPageProps) {
                 className={styles["template-article"]}
                 dangerouslySetInnerHTML={{ __html: template.detailsHtml }}
               />
+              {template.faqItems?.length ? (
+                <section className={styles["template-faq"]} aria-labelledby="template-faq-title">
+                  <p>Questions before you draw</p>
+                  <h2 id="template-faq-title">{template.title} FAQ</h2>
+                  <div>
+                    {template.faqItems.map((item) => (
+                      <div key={item.question} className={styles["template-faq-item"]}>
+                        <h3>{item.question}</h3>
+                        <p>{item.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
               <div className={styles["template-feedback"]}>
                 <div>
                   <strong>Have a better template idea?</strong>

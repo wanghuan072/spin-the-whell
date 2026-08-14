@@ -53,18 +53,18 @@ function CompassPointer({ uid }: { uid: string }) {
     <svg viewBox="0 0 48 64" fill="none">
       <defs>
         <linearGradient id={`${uid}-brass`} x1="10" y1="8" x2="36" y2="58" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#fff1a8" /><stop offset="0.42" stopColor="#c8963e" /><stop offset="1" stopColor="#593619" />
+          <stop stopColor="var(--wheel-pointer-top)" /><stop offset="0.42" stopColor="var(--wheel-pointer-mid)" /><stop offset="1" stopColor="var(--wheel-pointer-bottom)" />
         </linearGradient>
         <radialGradient id={`${uid}-dial`} cx="36%" cy="30%" r="72%">
-          <stop stopColor="#f8e7ac" /><stop offset="0.72" stopColor="#8b5e2c" /><stop offset="1" stopColor="#332014" />
+          <stop stopColor="var(--wheel-pointer-jewel-light)" /><stop offset="0.72" stopColor="var(--wheel-pointer-jewel)" /><stop offset="1" stopColor="var(--wheel-pointer-detail)" />
         </radialGradient>
       </defs>
       <path className={styles.shadow} d="M24 63L16 24C11 21 8 16 8 11H40C40 16 37 21 32 24L24 63Z" />
       <path className={styles.body} d="M24 59L18.5 23C14 21 11 17 11 12H37C37 17 34 21 29.5 23L24 59Z" fill={`url(#${uid}-brass)`} />
       <circle className={styles.rim} cx="24" cy="15" r="11" fill={`url(#${uid}-brass)`} />
-      <circle cx="24" cy="15" r="7.3" fill={`url(#${uid}-dial)`} stroke="#2f1d12" strokeWidth="1" />
-      <path d="M24 8L26 14L24 22L22 14L24 8Z" fill="#f8fafc" stroke="#4b2e16" strokeWidth="0.8" />
-      <path d="M24 22L22 15L24 8L26 15L24 22Z" fill="#b91c1c" opacity="0.82" />
+      <circle cx="24" cy="15" r="7.3" fill={`url(#${uid}-dial)`} stroke="var(--wheel-pointer-border)" strokeWidth="1" />
+      <path d="M24 8L26 14L24 22L22 14L24 8Z" fill="#ffffff" stroke="var(--wheel-pointer-rim-stroke)" strokeWidth="0.8" />
+      <path d="M24 22L22 15L24 8L26 15L24 22Z" fill="var(--wheel-pointer-accent)" opacity="0.9" />
       <path className={styles.shine} d="M20 27L22 25L24 49L24 55L20 27Z" />
     </svg>
   );
@@ -75,15 +75,15 @@ function CourtPointer({ uid }: { uid: string }) {
     <svg viewBox="0 0 48 64" fill="none">
       <defs>
         <linearGradient id={`${uid}-steel`} x1="12" y1="8" x2="34" y2="58" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#f8fafc" /><stop offset="0.32" stopColor="#64748b" /><stop offset="0.58" stopColor="#111827" /><stop offset="1" stopColor="#020617" />
+          <stop stopColor="var(--wheel-pointer-top)" /><stop offset="0.32" stopColor="var(--wheel-pointer-mid)" /><stop offset="0.58" stopColor="var(--wheel-pointer-bottom)" /><stop offset="1" stopColor="var(--wheel-pointer-detail)" />
         </linearGradient>
         <radialGradient id={`${uid}-ball`} cx="34%" cy="28%" r="72%">
-          <stop stopColor="#fdba74" /><stop offset="0.55" stopColor="#ea580c" /><stop offset="1" stopColor="#7c2d12" />
+          <stop stopColor="var(--wheel-pointer-rim-top)" /><stop offset="0.55" stopColor="var(--wheel-pointer-rim-bottom)" /><stop offset="1" stopColor="var(--wheel-pointer-jewel)" />
         </radialGradient>
       </defs>
       <path className={styles.shadow} d="M24 63L11 27L14 10H34L37 27L24 63Z" />
       <path className={styles.body} d="M24 59L14 27L17 12H31L34 27L24 59Z" fill={`url(#${uid}-steel)`} />
-      <path d="M24 55L20 28H28L24 55Z" fill="#ef4444" />
+      <path d="M24 55L20 28H28L24 55Z" fill="var(--wheel-pointer-accent)" />
       <circle className={styles.rim} cx="24" cy="17" r="10" fill={`url(#${uid}-ball)`} />
       <path className={styles.line} d="M14 17H34M24 7C20 12 20 22 24 27M24 7C28 12 28 22 24 27" />
       <path className={styles.shine} d="M18 13C20 10 23 9 25 9L20 15L18 13Z" />
@@ -96,18 +96,18 @@ function CinemaPointer({ uid }: { uid: string }) {
     <svg viewBox="0 0 48 64" fill="none">
       <defs>
         <linearGradient id={`${uid}-noir`} x1="9" y1="8" x2="38" y2="59" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#525252" /><stop offset="0.38" stopColor="#171717" /><stop offset="1" stopColor="#000000" />
+          <stop stopColor="var(--wheel-pointer-top)" /><stop offset="0.38" stopColor="var(--wheel-pointer-mid)" /><stop offset="1" stopColor="var(--wheel-pointer-bottom)" />
         </linearGradient>
         <linearGradient id={`${uid}-gold`} x1="9" y1="9" x2="38" y2="28" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#fff0a8" /><stop offset="0.5" stopColor="#d6aa4b" /><stop offset="1" stopColor="#7c511f" />
+          <stop stopColor="var(--wheel-pointer-rim-top)" /><stop offset="0.5" stopColor="var(--wheel-pointer-rim-bottom)" /><stop offset="1" stopColor="var(--wheel-pointer-jewel)" />
         </linearGradient>
       </defs>
       <path className={styles.shadow} d="M24 63L7 29L10 8H38L41 29L24 63Z" />
       <path className={styles.body} d="M24 59L10 28L13 11H35L38 28L24 59Z" fill={`url(#${uid}-noir)`} />
       <path className={styles.rim} d="M13 11H35L37 22H11L13 11Z" fill={`url(#${uid}-gold)`} />
-      <path d="M13 11H35L32 17H10L13 11Z" fill="#171717" opacity="0.76" />
-      <path d="M16 11L20 17M25 11L29 17M34 11L37 15" stroke="#f8e7ac" strokeWidth="2" />
-      <path d="M24 55L18 28H30L24 55Z" fill="#d6aa4b" />
+      <path d="M13 11H35L32 17H10L13 11Z" fill="var(--wheel-pointer-detail)" opacity="0.82" />
+      <path d="M16 11L20 17M25 11L29 17M34 11L37 15" stroke="var(--wheel-pointer-line)" strokeWidth="2" />
+      <path d="M24 55L18 28H30L24 55Z" fill="var(--wheel-pointer-accent)" />
       <path className={styles.shine} d="M20 30L22 28L24 47L24 53L20 30Z" />
     </svg>
   );

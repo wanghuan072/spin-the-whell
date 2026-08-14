@@ -58,7 +58,7 @@ const typeIcons = {
 };
 
 const stages = {
-  "event-raffle-wheel": {
+  "raffle-wheel": {
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Findings_Festival_2018.jpg/1280px-Findings_Festival_2018.jpg",
     file: "festival-stage.webp",
   },

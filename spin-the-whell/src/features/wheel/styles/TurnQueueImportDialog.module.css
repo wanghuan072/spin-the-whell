@@ -35,7 +35,7 @@
 
 .queue-import-header span {
   color: var(--color-primary);
-  font-size: 0.6rem;
+  font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -43,13 +43,13 @@
 
 .queue-import-header h2 {
   color: var(--color-text);
-  font-size: 1rem;
+  font-size: 1.18rem;
 }
 
 .queue-import-header p {
   max-width: 560px;
   color: var(--color-muted);
-  font-size: 0.68rem;
+  font-size: 0.84rem;
   line-height: 1.45;
 }
 
@@ -90,7 +90,7 @@
   border-radius: 8px;
   background: var(--color-surface-alt);
   color: var(--color-muted);
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   font-weight: 750;
 }
 
@@ -115,7 +115,7 @@
 .paste-area > span,
 .paste-area small {
   color: var(--color-muted);
-  font-size: 0.62rem;
+  font-size: 0.76rem;
   font-weight: 650;
 }
 
@@ -129,7 +129,7 @@
   background: var(--color-surface-alt);
   color: var(--color-text);
   font: inherit;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   line-height: 1.55;
 }
 
@@ -158,14 +158,14 @@
 .excel-drop-zone strong {
   overflow: hidden;
   color: var(--color-text);
-  font-size: 0.68rem;
+  font-size: 0.84rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .excel-drop-zone span {
   color: var(--color-muted);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
 }
 
 .excel-drop-zone label {
@@ -174,7 +174,7 @@
   border-radius: 7px;
   background: var(--color-surface);
   color: var(--color-text);
-  font-size: 0.6rem;
+  font-size: 0.76rem;
   font-weight: 750;
 }
 
@@ -199,7 +199,7 @@
 
 .excel-selectors span {
   color: var(--color-muted);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
   font-weight: 700;
 }
 
@@ -213,7 +213,7 @@
   background: var(--color-surface);
   color: var(--color-text);
   font: inherit;
-  font-size: 0.62rem;
+  font-size: 0.78rem;
 }
 
 .queue-preview {
@@ -234,14 +234,14 @@
 
 .queue-preview strong {
   color: var(--color-text);
-  font-size: 0.68rem;
+  font-size: 0.84rem;
 }
 
 .queue-preview span,
 .queue-preview p,
 .queue-preview small {
   color: var(--color-muted);
-  font-size: 0.6rem;
+  font-size: 0.76rem;
 }
 
 .queue-preview ol {
@@ -270,7 +270,7 @@
 
 .queue-preview li em {
   color: var(--color-primary);
-  font-size: 0.57rem;
+  font-size: 0.72rem;
   font-style: normal;
   font-weight: 750;
 }
@@ -287,7 +287,7 @@
 
 .queue-import-footer p {
   color: var(--color-muted);
-  font-size: 0.61rem;
+  font-size: 0.76rem;
 }
 
 .queue-import-footer > div {
@@ -302,7 +302,7 @@
   border-radius: 8px;
   background: var(--color-surface);
   color: var(--color-text);
-  font-size: 0.62rem;
+  font-size: 0.78rem;
   font-weight: 750;
 }
 

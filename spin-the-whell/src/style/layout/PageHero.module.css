@@ -1,85 +1,151 @@
 .hero {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
-  border-bottom: 3px dashed color-mix(in oklch, var(--color-accent) 40%, var(--color-line));
+  border-bottom: 1px solid var(--color-line-soft);
   background:
-    radial-gradient(circle at 85% 10%, color-mix(in oklch, var(--color-primary) 20%, transparent), transparent 40%),
-    radial-gradient(circle at 10% 90%, color-mix(in oklch, var(--color-secondary) 16%, transparent), transparent 40%),
-    linear-gradient(180deg, var(--color-background-deep), var(--color-background));
+    radial-gradient(circle at 84% 12%, color-mix(in oklab, var(--color-primary) 10%, transparent), transparent 25rem),
+    radial-gradient(circle at 12% 100%, color-mix(in oklab, #4da8ff 6%, transparent), transparent 28rem),
+    var(--color-background);
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.hero::before {
+  top: 54px;
+  right: 7%;
+  width: 180px;
+  height: 180px;
+  border: 1px dashed color-mix(in oklab, var(--color-primary) 18%, transparent);
+  opacity: 0.55;
+}
+
+.hero::after {
+  top: 86px;
+  right: 11%;
+  width: 10px;
+  height: 10px;
+  background: #ffd22f;
+  box-shadow: 74px 112px 0 #48c7d7, -62px 104px 0 #ef4a98;
+  transform: rotate(45deg);
 }
 
 .inner {
   position: relative;
   z-index: 1;
+  max-width: 1400px;
+  padding-block: clamp(54px, 7vw, 84px);
+}
+
+.hasAside {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
-  gap: 28px;
-  padding-block: clamp(48px, 8vh, 88px);
+  grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
+  gap: clamp(40px, 7vw, 108px);
+  align-items: center;
+}
+
+.solo {
+  min-height: 330px;
+  display: flex;
   align-items: center;
 }
 
 .copy {
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .eyebrow {
   display: inline-flex;
-  margin-bottom: 12px;
-  padding: 6px 12px;
-  border: 2px solid color-mix(in oklch, var(--color-accent) 50%, var(--color-line));
+  width: fit-content;
+  margin-bottom: 17px;
+  padding: 7px 11px;
+  border: 1px solid color-mix(in oklab, var(--color-primary) 14%, var(--color-line-soft));
   border-radius: 999px;
-  background: color-mix(in oklch, var(--color-accent) 14%, var(--color-surface));
-  color: var(--color-accent-strong);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  background: color-mix(in oklab, var(--color-primary) 8%, var(--color-surface));
+  color: var(--color-primary);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.075em;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 .copy h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4.8vw, 3.2rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.12;
-  background: linear-gradient(180deg, var(--color-text) 0%, var(--color-text) 35%, var(--color-primary) 100%);
-  background-clip: text;
-  color: transparent;
+  max-width: 16ch;
+  color: var(--color-text);
+  font-size: clamp(2.55rem, 5vw, 4.7rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
 }
 
 .description {
-  max-width: 38rem;
-  margin-top: 14px;
+  max-width: 650px;
+  margin-top: 20px;
   color: var(--color-muted);
-  font-size: 1.02rem;
-  line-height: 1.55;
+  font-size: clamp(1.02rem, 1.22vw, 1.14rem);
+  font-weight: 590;
+  line-height: 1.68;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 22px;
+  gap: 11px;
+  margin-top: 26px;
 }
 
 .aside {
+  position: relative;
   min-width: 0;
 }
 
-@media (max-width: 1024px) {
-  .inner {
-    gap: 22px;
-    padding-block: clamp(36px, 5vh, 64px);
+@media (max-width: 980px) {
+  .hasAside {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
+    gap: 30px;
   }
 
   .copy h1 {
-    font-size: clamp(1.85rem, 4.4vw, 2.7rem);
+    font-size: clamp(2.35rem, 5.2vw, 3.8rem);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .inner {
+    padding-block: 42px;
+  }
+
+  .hasAside {
     grid-template-columns: 1fr;
-    align-items: start;
+    gap: 30px;
+  }
+
+  .solo {
+    min-height: 270px;
+  }
+
+  .copy h1 {
+    max-width: 18ch;
+    font-size: clamp(2.35rem, 12vw, 3.4rem);
+  }
+
+  .description {
+    margin-top: 16px;
+  }
+
+  .actions {
+    margin-top: 22px;
+  }
+
+  .hero::before {
+    right: -60px;
   }
 }

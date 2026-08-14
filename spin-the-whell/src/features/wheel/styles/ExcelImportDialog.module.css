@@ -38,7 +38,7 @@
 
 .excel-modal-header span {
   color: var(--color-success);
-  font-size: 0.61rem;
+  font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -47,14 +47,14 @@
 .excel-modal-header h2 {
   margin-top: 4px;
   color: var(--color-text);
-  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
   line-height: 1.1;
 }
 
 .excel-modal-header p {
   margin-top: 7px;
   color: var(--color-muted);
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   line-height: 1.5;
 }
 
@@ -92,7 +92,7 @@
   border-radius: 8px;
   background: var(--color-surface-alt);
   color: var(--color-muted);
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   font-weight: 750;
 }
 
@@ -131,7 +131,7 @@
 
 .paste-workspace > label span {
   color: var(--color-muted);
-  font-size: 0.62rem;
+  font-size: 0.76rem;
   font-weight: 650;
   line-height: 1.4;
 }
@@ -146,7 +146,7 @@
   background: var(--color-surface-alt);
   color: var(--color-text);
   font: inherit;
-  font-size: 0.74rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
@@ -199,12 +199,12 @@
 
 .excel-drop-zone strong {
   color: var(--color-text);
-  font-size: 0.77rem;
+  font-size: 0.92rem;
 }
 
 .excel-drop-zone > div span {
   color: var(--color-muted);
-  font-size: 0.64rem;
+  font-size: 0.78rem;
 }
 
 .excel-drop-zone label {
@@ -218,7 +218,7 @@
   background: oklch(94% 0.04 155);
   color: var(--color-success);
   cursor: pointer;
-  font-size: 0.63rem;
+  font-size: 0.78rem;
   font-weight: 750;
   white-space: nowrap;
 }
@@ -273,13 +273,13 @@
 
 .excel-file-row strong {
   color: var(--color-text);
-  font-size: 0.72rem;
+  font-size: 0.86rem;
 }
 
 .excel-file-row small {
   margin-top: 2px;
   color: var(--color-muted);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
 }
 
 .excel-import-selectors {
@@ -297,7 +297,7 @@
   display: block;
   margin-bottom: 5px;
   color: var(--color-muted);
-  font-size: 0.61rem;
+  font-size: 0.76rem;
   font-weight: 700;
 }
 
@@ -310,7 +310,7 @@
   border-radius: 6px;
   background: var(--color-surface);
   color: var(--color-text);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
 }
 
 .excel-preview {
@@ -326,7 +326,7 @@
 
 .excel-preview > div strong,
 .excel-preview > div span {
-  font-size: 0.64rem;
+  font-size: 0.78rem;
 }
 
 .excel-preview > div span,
@@ -358,7 +358,7 @@
   border-radius: 5px;
   background: var(--color-surface);
   color: var(--color-text);
-  font-size: 0.65rem;
+  font-size: 0.8rem;
 }
 
 .excel-preview li > span {
@@ -369,7 +369,7 @@
   border-radius: 50%;
   background: oklch(94% 0.04 155);
   color: var(--color-success);
-  font-size: 0.53rem;
+  font-size: 0.7rem;
   font-weight: 800;
 }
 
@@ -383,7 +383,7 @@
 
 .excel-preview > p {
   margin-top: 7px;
-  font-size: 0.61rem;
+  font-size: 0.76rem;
 }
 
 .excel-modal-footer {
@@ -410,7 +410,7 @@
   border-radius: 6px;
   background: var(--color-surface);
   color: var(--color-text);
-  font-size: 0.62rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
@@ -427,7 +427,7 @@
 
 .excel-import-status {
   color: var(--color-muted);
-  font-size: 0.61rem;
+  font-size: 0.76rem;
   line-height: 1.4;
 }
 

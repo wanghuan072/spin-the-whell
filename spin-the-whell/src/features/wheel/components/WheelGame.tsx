@@ -1397,10 +1397,12 @@ export function WheelGame({
               </button>
             </div>
 
-            <div className={`${styles["wheel-machine"]} ${result ? styles["has-winner"] : ""}`}>
+            <div
+              className={`${styles["wheel-machine"]} ${result ? styles["has-winner"] : ""}`}
+              style={wheelChromeStyle}
+            >
               <div
                 className={`${styles["wheel-shell"]} ${styles[`rim-${rimStyle}`] ?? ""} ${styles[`lights-${lightsStyle}`] ?? ""}`}
-                style={wheelChromeStyle}
               >
                 {pointerPosition !== "center" ? (
                   <WheelPointer
@@ -1524,7 +1526,7 @@ export function WheelGame({
                 className={styleTab === "look" ? styles["is-active"] : ""}
                 onClick={() => setStyleTab("look")}
               >
-                Look
+                Wheel
               </button>
               <button
                 type="button"
@@ -1533,7 +1535,7 @@ export function WheelGame({
                 className={styleTab === "chrome" ? styles["is-active"] : ""}
                 onClick={() => setStyleTab("chrome")}
               >
-                Chrome
+                Frame
               </button>
               <button
                 type="button"
@@ -1550,11 +1552,11 @@ export function WheelGame({
               <>
                 <section className={styles["style-section"]}>
                   <div className={styles["style-section-heading"]}>
-                    <strong>Slice style</strong>
-                    <span>Fill geometry &amp; borders</span>
+                    <strong>Wheel skin</strong>
+                    <span>Color, material and slice finish</span>
                   </div>
                   <fieldset className={styles["palette-grid"]}>
-                    <legend className={styles["sr-only"]}>Slice style</legend>
+                    <legend className={styles["sr-only"]}>Wheel skin</legend>
                     {WHEEL_PALETTES.map((palette) => (
                       <label
                         key={palette.id}
@@ -1653,7 +1655,7 @@ export function WheelGame({
                 <section className={styles["style-section"]}>
                   <div className={styles["style-section-heading"]}>
                     <strong>Pointer</strong>
-                    <span>Pick a marker style</span>
+                    <span>Choose a marker that fits the theme</span>
                   </div>
                   <fieldset className={styles["pointer-grid"]}>
                     <legend className={styles["sr-only"]}>Pointer style</legend>
@@ -1707,11 +1709,11 @@ export function WheelGame({
 
                 <section className={styles["style-section"]}>
                   <div className={styles["style-section-heading"]}>
-                    <strong>Rim</strong>
-                    <span>Wheel frame color</span>
+                    <strong>Frame finish</strong>
+                    <span>Theme, material and outer ring</span>
                   </div>
                   <fieldset className={styles["chrome-grid"]}>
-                    <legend className={styles["sr-only"]}>Rim color</legend>
+                    <legend className={styles["sr-only"]}>Frame finish</legend>
                     {WHEEL_RIM_STYLES.map((rim) => (
                       <label
                         key={rim.id}
@@ -1742,8 +1744,8 @@ export function WheelGame({
 
                 <section className={styles["style-section"]}>
                   <div className={styles["style-section-heading"]}>
-                    <strong>Lights</strong>
-                    <span>Bulb color and motion</span>
+                    <strong>Light detail</strong>
+                    <span>Bulb shape, color and motion</span>
                   </div>
                   <fieldset className={styles["chrome-grid"]}>
                     <legend className={styles["sr-only"]}>Light effect</legend>

@@ -56,4 +56,9 @@ export type WheelTemplate = {
   }>;
   seo: SeoRecord;
   detailsHtml: string;
+  /** Questions rendered on the page and reused by the FAQPage schema. */
+  faqItems?: Array<{
+    question: string;
+    answer: string;
+  }>;
 };

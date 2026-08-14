@@ -13,6 +13,15 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/templates/event-raffle-wheel",
+        destination: "/templates/raffle-wheel",
+        statusCode: 301,
+      },
+    ];
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

@@ -43,13 +43,13 @@
 
 .queue-live-heading span {
   color: var(--color-primary);
-  font-size: 0.6rem;
+  font-size: 0.76rem;
   font-weight: 800;
 }
 
 .queue-live-heading strong {
   color: var(--color-muted);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
 }
 
 .queue-live-current {
@@ -63,21 +63,21 @@
 .queue-live-current span,
 .queue-live-next span {
   color: var(--color-muted);
-  font-size: 0.52rem;
+  font-size: 0.7rem;
   font-weight: 700;
 }
 
 .queue-live-current strong {
   overflow: hidden;
   color: var(--color-text);
-  font-size: 0.76rem;
+  font-size: 0.9rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .queue-live-current em {
   color: var(--color-primary);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
   font-style: normal;
   font-weight: 750;
 }
@@ -99,7 +99,7 @@
 .queue-live-next strong {
   overflow: hidden;
   color: var(--color-text);
-  font-size: 0.56rem;
+  font-size: 0.72rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -114,12 +114,12 @@
 
 .queue-live-empty strong {
   color: var(--color-text);
-  font-size: 0.66rem;
+  font-size: 0.8rem;
 }
 
 .queue-live-empty p {
   color: var(--color-muted);
-  font-size: 0.55rem;
+  font-size: 0.72rem;
   line-height: 1.35;
 }
 
@@ -133,13 +133,13 @@
 
 .queue-summary span {
   color: var(--color-muted);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
   font-weight: 700;
 }
 
 .queue-summary strong {
   color: var(--color-text);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
 }
 
 .queue-tools {
@@ -162,7 +162,7 @@
   border-radius: 8px;
   background: var(--color-surface);
   color: var(--color-text);
-  font-size: 0.62rem;
+  font-size: 0.78rem;
   font-weight: 750;
 }
 
@@ -235,7 +235,7 @@
   border-radius: 7px;
   background: var(--color-surface-alt);
   color: var(--color-muted);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
   font-weight: 800;
 }
 
@@ -254,7 +254,7 @@
 
 .queue-fields > input {
   height: 22px;
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   font-weight: 700;
 }
 
@@ -270,7 +270,7 @@
   align-items: center;
   gap: 4px;
   color: var(--color-muted);
-  font-size: 0.56rem;
+  font-size: 0.72rem;
   font-weight: 700;
 }
 
@@ -281,13 +281,13 @@
   border: 1px solid var(--color-line-soft);
   border-radius: 5px;
   background: var(--color-surface-alt);
-  font-size: 0.58rem;
+  font-size: 0.74rem;
   text-align: center;
 }
 
 .item-status {
   color: var(--color-primary);
-  font-size: 0.56rem;
+  font-size: 0.72rem;
   font-weight: 800;
 }
 
@@ -304,13 +304,13 @@
 
 .queue-empty strong {
   color: var(--color-text);
-  font-size: 0.72rem;
+  font-size: 0.86rem;
 }
 
 .queue-empty p {
   max-width: 180px;
   color: var(--color-muted);
-  font-size: 0.61rem;
+  font-size: 0.76rem;
   line-height: 1.4;
 }
 

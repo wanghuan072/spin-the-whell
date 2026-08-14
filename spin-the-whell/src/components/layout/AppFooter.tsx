@@ -16,20 +16,27 @@ export function AppFooter() {
         <div className={styles["footer-brand"]}>
           <Link href="/" className={styles["footer-logo"]} aria-label={`${siteConfig.displayName} home`}>
             <BrandWheelMark className={styles["footer-wheel"]} />
-            <strong>{siteConfig.displayName}</strong>
+            <strong>{siteConfig.name}</strong>
           </Link>
           <p>{siteConfig.description}</p>
         </div>
 
         <div className={styles["footer-nav-groups"]}>
-          <nav aria-label="Navigate">
-            <strong>Navigate</strong>
+          <nav aria-label="Product">
+            <strong>Product</strong>
             <ul className={styles["footer-navigation"]}>
-              {primaryNavigation.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href}>{item.label}</Link>
-                </li>
+              {primaryNavigation.filter((item) => item.href !== "/blog").map((item) => (
+                <li key={item.href}><Link href={item.href}>{item.label}</Link></li>
               ))}
+            </ul>
+          </nav>
+
+          <nav aria-label="Resources">
+            <strong>Resources</strong>
+            <ul className={styles["footer-navigation"]}>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/#faq">FAQ</Link></li>
+              <li><Link href="/#wheel-game">Live wheel</Link></li>
             </ul>
           </nav>
 
@@ -38,9 +45,7 @@ export function AppFooter() {
             <ul className={styles["footer-navigation"]}>
               {legalNavigation.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} rel={LEGAL_LINK_REL}>
-                    {item.label}
-                  </Link>
+                  <Link href={item.href} rel={LEGAL_LINK_REL}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -50,9 +55,8 @@ export function AppFooter() {
 
       <div className={styles["footer-bottom"]}>
         <div className={`container ${styles["footer-bottom-inner"]}`}>
-          <p>
-            Copyright © {year} {siteConfig.name}. All rights reserved.
-          </p>
+          <p>© {year} {siteConfig.name}. All rights reserved.</p>
+          <p>Made for easier decisions.</p>
         </div>
       </div>
     </footer>

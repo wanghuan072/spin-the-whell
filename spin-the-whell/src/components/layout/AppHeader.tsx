@@ -39,8 +39,7 @@ export function AppHeader() {
         <Link href="/" className={styles["brand-link"]} aria-label="Spin Any Wheel home">
           <BrandWheelMark className={styles["brand-mark"]} />
           <span className={styles["brand-copy"]}>
-            <strong>Spin</strong>
-            <span>Any Wheel</span>
+            <strong>Spinanywheel</strong>
           </span>
         </Link>
 
@@ -69,7 +68,7 @@ export function AppHeader() {
                 onClick={() => setMenuPath(null)}
               >
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-8 12h6l-1 8 9-13h-6Z" /></svg>
-                Spin now
+                Open wheel
               </Link>
             </li>
           </ul>
@@ -80,7 +79,7 @@ export function AppHeader() {
           <HeaderAuth />
           <Link href="/#wheel-game" className={styles["header-cta"]}>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-8 12h6l-1 8 9-13h-6Z" /></svg>
-            Spin now
+            Open wheel
           </Link>
           <button
             type="button"

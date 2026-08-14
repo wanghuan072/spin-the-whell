@@ -1,79 +1,74 @@
 .app-footer {
-  border-top: 1px solid var(--color-line-soft);
-  background: var(--color-surface-alt);
+  padding: 0 0 28px;
+  background: var(--color-background);
 }
 
 .app-footer-content {
   display: grid;
-  max-width: 1180px;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 40px 64px;
+  max-width: 1400px;
+  grid-template-columns: minmax(250px, 1.25fr) minmax(0, 1.75fr);
+  gap: 48px;
   align-items: start;
-  padding-block: 36px 28px;
+  padding: 30px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: 14px 14px 0 0;
+  background: var(--color-surface);
+  box-shadow: 0 13px 36px rgb(38 44 91 / 5%);
 }
 
 .footer-brand {
   display: grid;
   gap: 12px;
-  max-width: 420px;
+  max-width: 350px;
 }
 
 .footer-logo {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
   width: fit-content;
+  align-items: center;
+  gap: 9px;
   color: var(--color-text);
 }
 
 .footer-wheel {
+  width: 34px;
+  height: 34px;
   flex: 0 0 auto;
-  width: 44px;
-  height: 38px;
   overflow: visible;
-  filter: drop-shadow(0 4px 7px rgb(23 16 44 / 22%));
+  filter: drop-shadow(0 4px 7px rgb(42 44 96 / 12%));
 }
 
 .footer-logo strong {
-  background: linear-gradient(110deg, #f59e0b, #ef476f 46%, #8b5cf6);
-  background-clip: text;
-  color: transparent;
+  font-family: var(--font-display);
   font-size: 1.08rem;
-  font-weight: 850;
+  font-weight: 820;
   letter-spacing: -0.035em;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .footer-brand > p {
-  margin: 0;
+  max-width: 300px;
   color: var(--color-muted);
-  font-size: 0.8rem;
-  line-height: 1.55;
+  font-size: 0.86rem;
+  line-height: 1.65;
 }
 
 .footer-nav-groups {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px 40px;
-  justify-self: end;
-  width: min(100%, 420px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
 }
 
 .app-footer nav > strong {
   display: block;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 850;
 }
 
 .footer-navigation {
   display: grid;
-  gap: 4px;
-  margin: 8px 0 0;
-  padding: 0;
-  list-style: none;
+  gap: 2px;
+  margin-top: 9px;
 }
 
 .footer-navigation a {
@@ -81,53 +76,55 @@
   min-height: 28px;
   align-items: center;
   color: var(--color-muted);
-  font-size: 0.78rem;
-  font-weight: 550;
+  font-size: 0.82rem;
+  font-weight: 620;
+  transition: color 160ms var(--ease), transform 160ms var(--ease);
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--color-line-soft);
+  width: min(100% - 48px, 1400px);
+  margin-inline: auto;
+  border: 1px solid var(--color-line-soft);
+  border-top: 0;
+  border-radius: 0 0 14px 14px;
+  background: var(--color-surface);
 }
 
 .footer-bottom-inner {
-  max-width: 1180px;
-  padding-block: 14px 18px;
+  display: flex;
+  width: 100%;
+  max-width: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 30px;
 }
 
 .footer-bottom p {
-  margin: 0;
   color: var(--color-muted);
-  font-size: 0.68rem;
-  font-weight: 550;
+  font-size: 0.74rem;
+  font-weight: 600;
 }
 
-@media (max-width: 1024px) {
-  .app-footer-content {
-    gap: 32px 40px;
-    padding-block: 32px 24px;
-  }
-
-  .footer-nav-groups {
-    width: min(100%, 380px);
-  }
+@media (max-width: 900px) {
+  .app-footer-content { grid-template-columns: 1fr; gap: 30px; }
 }
 
-@media (max-width: 768px) {
-  .app-footer-content {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding-block: 28px 22px;
-  }
+@media (max-width: 700px) {
+  .app-footer { padding-bottom: 14px; }
+  .app-footer-content { padding: 24px 20px; }
+  .footer-nav-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .footer-bottom { width: min(100% - 28px, 1400px); }
 
-  .footer-nav-groups {
-    justify-self: stretch;
-    width: 100%;
+  .footer-bottom-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    padding: 13px 20px;
   }
 }
 
 @media (hover: hover) {
   .footer-navigation a:hover,
-  .footer-logo:hover {
-    color: var(--color-text);
-  }
+  .footer-logo:hover { color: var(--color-primary); }
+  .footer-navigation a:hover { transform: translateX(2px); }
 }

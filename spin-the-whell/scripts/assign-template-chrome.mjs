@@ -12,7 +12,7 @@ const chromeByTemplate = {
   "games-spin-the-wheel": ["chevron", "right", "neon", "aurora"],
   "pokemon-spin-the-wheel": ["claw", "left", "neon", "aurora"],
   "pokemon-type-team-wheel": ["claw", "bottom", "neon", "aurora"],
-  "event-raffle-wheel": ["jewel", "top", "classic", "classic"],
+  "raffle-wheel": ["jewel", "top", "classic", "classic"],
   "spin-the-wheel-yes-or-no": ["arrow", "center", "rose", "classic"],
   "color-spin-the-wheel": ["needle", "center", "ocean", "aurora"],
 };

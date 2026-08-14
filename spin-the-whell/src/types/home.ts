@@ -22,6 +22,10 @@ export type HomeContent = {
     label: string;
     href?: string;
     points?: string[];
+    facts?: Array<{
+      label: string;
+      value: string;
+    }>;
   }>;
   advantages: Array<HomeTextItem & {
     code: string;
