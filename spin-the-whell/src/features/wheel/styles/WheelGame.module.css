@@ -3813,97 +3813,114 @@
   .style-rail > .rail-tabs button { min-height: 40px; font-size: 0.82rem; }
 }
 
-/* 全屏模式使用独立舞台比例，让转盘接近屏幕可用高度并保留底部结果。 */
-.wheel-stage:fullscreen {
-  display: grid;
+/* Fullscreen is requested on .wheel-game, so the complete editor must stretch
+   before the stage can use the remaining viewport. */
+.wheel-game:fullscreen {
+  display: flex;
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
-  grid-template-rows: minmax(0, 1fr) auto;
-  align-items: center;
-  justify-items: center;
-  padding: 28px 24px 18px;
+  flex-direction: column;
+  border: 0;
+  border-radius: 0;
+  background: var(--color-surface);
   overflow: hidden;
 }
 
-.wheel-stage:fullscreen .stage-actions {
+.wheel-game:fullscreen .wheel-game-layout {
+  height: auto;
+  min-height: 0;
+  flex: 1 1 0;
+}
+
+.wheel-game:fullscreen .entries-rail,
+.wheel-game:fullscreen .style-rail {
+  max-height: none;
+  min-height: 0;
+}
+
+.wheel-game:fullscreen .wheel-stage {
+  min-height: 0;
+  height: 100%;
+  padding: 28px 24px 18px;
+}
+
+.wheel-game:fullscreen .stage-actions {
   display: flex;
   top: 18px;
   right: 18px;
 }
 
-.wheel-stage:fullscreen .queue-stage-status {
+.wheel-game:fullscreen .queue-stage-status {
   top: 18px;
   left: 18px;
   max-width: min(32vw, 260px);
   padding: 10px 12px;
 }
 
-.wheel-stage:fullscreen .queue-stage-status strong {
+.wheel-game:fullscreen .queue-stage-status strong {
   font-size: clamp(0.8rem, 1.4vmin, 1.05rem);
 }
 
-.wheel-stage:fullscreen .stage-actions .stage-icon {
+.wheel-game:fullscreen .stage-actions .stage-icon {
   width: 42px;
   height: 42px;
   background: oklch(99% 0.004 240 / 94%);
 }
 
-.wheel-stage:fullscreen .wheel-machine {
-  grid-row: 1;
-  align-self: center;
+.wheel-game:fullscreen .wheel-machine {
   padding-bottom: 70px;
   transform: translateY(-8px);
 }
 
-.wheel-stage:fullscreen .wheel-shell {
+.wheel-game:fullscreen .wheel-shell {
   width: min(78vh, calc(100vh - 170px), 90vw, 1000px);
 }
 
-.wheel-stage:fullscreen .wheel-base {
+.wheel-game:fullscreen .wheel-base {
   transform: translateX(-50%) scale(1.35);
   transform-origin: 50% 100%;
 }
 
-.wheel-stage:fullscreen .spin-button {
+.wheel-game:fullscreen .spin-button {
   width: clamp(90px, 10vmin, 132px);
   font-size: clamp(0.72rem, 1.2vmin, 1rem);
 }
 
-.wheel-stage:fullscreen .spin-button.is-winner {
+.wheel-game:fullscreen .spin-button.is-winner {
   font-size: clamp(0.62rem, 1vmin, 0.82rem);
 }
 
-.wheel-stage:fullscreen .wheel-label {
+.wheel-game:fullscreen .wheel-label {
   font-size: clamp(0.76rem, 1.5vmin, 1.18rem);
 }
 
-.wheel-stage:fullscreen .wheel-label.is-compact {
+.wheel-game:fullscreen .wheel-label.is-compact {
   font-size: clamp(0.58rem, 1.05vmin, 0.82rem);
 }
 
-.wheel-stage:fullscreen .winner-announcement {
+.wheel-game:fullscreen .winner-announcement {
   min-width: min(48vw, 420px);
   padding: 14px 24px;
 }
 
-.wheel-stage:fullscreen .winner-announcement strong {
+.wheel-game:fullscreen .winner-announcement strong {
   max-width: 280px;
   font-size: clamp(1rem, 1.7vmin, 1.35rem);
 }
 
-.wheel-stage:fullscreen .stage-footer {
+.wheel-game:fullscreen .stage-footer {
   right: auto;
   bottom: 18px;
   left: 18px;
   width: auto;
 }
 
-.wheel-stage:fullscreen .stage-footer p {
+.wheel-game:fullscreen .stage-footer p {
   display: none;
 }
 
-.wheel-stage:fullscreen .result-area {
+.wheel-game:fullscreen .result-area {
   position: absolute;
   right: auto;
   bottom: auto;
@@ -4540,6 +4557,102 @@
   min-height: 108px;
   gap: 6px;
   padding: 8px;
+}
+
+/* The studio has an intentionally brighter day treatment above. Re-map every
+   hard-coded surface when the global theme is dark so the rail never flashes white. */
+html[data-theme="night"] .style-rail {
+  scrollbar-color: #535b82 transparent;
+  background: linear-gradient(180deg, rgb(24 28 52 / 98%), rgb(20 24 45 / 98%)), var(--color-surface);
+}
+
+html[data-theme="night"] .style-rail .rail-header > strong,
+html[data-theme="night"] .style-rail .style-section-heading strong,
+html[data-theme="night"] .style-rail .palette-grid strong,
+html[data-theme="night"] .style-rail .background-grid strong,
+html[data-theme="night"] .style-rail .pointer-grid strong,
+html[data-theme="night"] .style-rail .style-subsection-heading strong,
+html[data-theme="night"] .style-rail .chrome-choice-copy strong {
+  color: #f4f5ff;
+}
+
+html[data-theme="night"] .style-rail-hint {
+  border-color: #4c4285;
+  background: linear-gradient(135deg, #2f2a57, #252449);
+  color: #b8a8ff;
+}
+
+html[data-theme="night"] .style-rail > .rail-tabs {
+  border-color: #343b5b;
+  background: #202640;
+}
+
+html[data-theme="night"] .style-rail > .rail-tabs button.is-active {
+  background: #2b2b54;
+  color: #c4b8ff;
+  box-shadow: 0 4px 12px rgb(3 5 18 / 24%), inset 0 -2px #8c70ff;
+}
+
+html[data-theme="night"] .style-rail .style-section {
+  border-bottom-color: #303753;
+}
+
+html[data-theme="night"] .style-rail .style-section-heading span,
+html[data-theme="night"] .style-rail .palette-grid em,
+html[data-theme="night"] .style-rail .chrome-choice-copy em,
+html[data-theme="night"] .style-rail .background-choice-copy em {
+  color: #aab1d0;
+}
+
+html[data-theme="night"] .style-rail .palette-grid label,
+html[data-theme="night"] .style-rail .pointer-grid label,
+html[data-theme="night"] .style-rail .background-grid label,
+html[data-theme="night"] .style-rail .chrome-grid label,
+html[data-theme="night"] .style-rail .winner-scene-grid > button {
+  border-color: #343b5b;
+  background: rgb(31 37 63 / 92%);
+  box-shadow: 0 5px 14px rgb(3 5 18 / 18%);
+}
+
+html[data-theme="night"] .style-rail .palette-grid label:hover,
+html[data-theme="night"] .style-rail .pointer-grid label:hover,
+html[data-theme="night"] .style-rail .background-grid label:hover,
+html[data-theme="night"] .style-rail .chrome-grid label:hover,
+html[data-theme="night"] .style-rail .winner-scene-grid > button:hover {
+  border-color: #665bb0;
+  box-shadow: 0 8px 20px rgb(3 5 18 / 26%);
+}
+
+html[data-theme="night"] .style-rail .palette-grid label.is-selected,
+html[data-theme="night"] .style-rail .pointer-grid label.is-selected,
+html[data-theme="night"] .style-rail .background-grid label.is-selected,
+html[data-theme="night"] .style-rail .chrome-grid label.is-selected,
+html[data-theme="night"] .style-rail .winner-scene-grid > button[aria-checked="true"] {
+  border-color: #9278ff;
+  background: linear-gradient(145deg, #302b5c, #252747);
+  box-shadow: 0 0 0 1px rgb(146 120 255 / 18%), 0 8px 20px rgb(3 5 18 / 24%);
+}
+
+html[data-theme="night"] .style-rail .pointer-swatch,
+html[data-theme="night"] .style-rail .lights-swatch,
+html[data-theme="night"] .style-rail .position-swatch {
+  border-color: #3a4263;
+  background: linear-gradient(145deg, #242b49, #1d233c);
+}
+
+html[data-theme="night"] .style-rail .pointer-position-grid label {
+  border-color: #343b5b;
+  background: #202640;
+}
+
+html[data-theme="night"] .style-rail .pointer-position-grid label.is-selected {
+  border-color: #9278ff;
+  background: #2e2a58;
+  box-shadow: inset 0 0 0 1px rgb(146 120 255 / 18%);
+}
+
+html[data-theme="night"] .wheel-game:fullscreen .stage-actions .stage-icon {
+  background: rgb(24 28 52 / 94%);
 }
 
 @media (min-width: 1024px) {
