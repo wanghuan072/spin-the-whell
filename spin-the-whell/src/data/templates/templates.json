@@ -520,7 +520,7 @@
   },
   {
     "id": 6,
-    "isHome": false,
+    "isHome": true,
     "title": "NBA Teams Spin The Wheel",
     "description": "Spin all 30 NBA teams with equal starter weights for watch-party games, friendly matchups, trivia prompts, or a no-repeat league challenge.",
     "imageUrl": "/images/templates/screenshots/nba-teams-spin-the-wheel.webp",
@@ -715,7 +715,7 @@
   },
   {
     "id": 9,
-    "isHome": false,
+    "isHome": true,
     "title": "Movie Spin The Wheel",
     "description": "Spin twelve movie genres to escape endless browsing, or replace them with titles already available and acceptable to everyone watching tonight.",
     "imageUrl": "/images/templates/screenshots/movie-spin-the-wheel.webp",
@@ -888,7 +888,7 @@
   },
   {
     "id": 11,
-    "isHome": false,
+    "isHome": true,
     "title": "Pokemon Spin The Wheel",
     "description": "Spin 24 familiar Pokémon names for a casual favorite, drawing prompt, party challenge, or starter draft. Edit the list to match the game, generation, or collection your group uses.",
     "imageUrl": "/images/templates/screenshots/pokemon-spin-the-wheel.webp",
@@ -1076,7 +1076,7 @@
   },
   {
     "id": 13,
-    "isHome": false,
+    "isHome": true,
     "title": "Spin the Wheel Names",
     "description": "Load a class, meeting, or activity roster and pick one visible name at a time. Equal starter weights, Remove winner, and Results support clear low-stakes rounds.",
     "imageUrl": "/images/templates/screenshots/spin-the-wheel-names-editor.webp",
